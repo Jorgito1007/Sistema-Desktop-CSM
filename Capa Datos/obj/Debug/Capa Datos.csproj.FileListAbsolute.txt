@@ -1,0 +1,53 @@
+C:\BD\Repositorio para Base de Datos Sql Server\Gimnasio\Base-de-Datos-Gimnasio\Proyecto de Visual Studio C#\Capa Datos\bin\Debug\Capa Datos.dll
+C:\BD\Repositorio para Base de Datos Sql Server\Gimnasio\Base-de-Datos-Gimnasio\Proyecto de Visual Studio C#\Capa Datos\bin\Debug\Capa Datos.pdb
+C:\BD\Repositorio para Base de Datos Sql Server\Gimnasio\Base-de-Datos-Gimnasio\Proyecto de Visual Studio C#\Capa Datos\obj\Debug\Capa Datos.csproj.AssemblyReference.cache
+C:\BD\Repositorio para Base de Datos Sql Server\Gimnasio\Base-de-Datos-Gimnasio\Proyecto de Visual Studio C#\Capa Datos\obj\Debug\Capa Datos.csproj.CoreCompileInputs.cache
+C:\BD\Repositorio para Base de Datos Sql Server\Gimnasio\Base-de-Datos-Gimnasio\Proyecto de Visual Studio C#\Capa Datos\obj\Debug\Capa Datos.dll
+C:\BD\Repositorio para Base de Datos Sql Server\Gimnasio\Base-de-Datos-Gimnasio\Proyecto de Visual Studio C#\Capa Datos\obj\Debug\Capa Datos.pdb
+C:\BD\Repositorio para Visual C# Gimnasio\Proyecto-Gimnasio-Visual-C-\Capa Datos\bin\Debug\Capa Datos.dll
+C:\BD\Repositorio para Visual C# Gimnasio\Proyecto-Gimnasio-Visual-C-\Capa Datos\bin\Debug\Capa Datos.pdb
+C:\BD\Repositorio para Visual C# Gimnasio\Proyecto-Gimnasio-Visual-C-\Capa Datos\obj\Debug\Capa Datos.csproj.AssemblyReference.cache
+C:\BD\Repositorio para Visual C# Gimnasio\Proyecto-Gimnasio-Visual-C-\Capa Datos\obj\Debug\Capa Datos.csproj.CoreCompileInputs.cache
+C:\BD\Repositorio para Visual C# Gimnasio\Proyecto-Gimnasio-Visual-C-\Capa Datos\obj\Debug\Capa Datos.dll
+C:\BD\Repositorio para Visual C# Gimnasio\Proyecto-Gimnasio-Visual-C-\Capa Datos\obj\Debug\Capa Datos.pdb
+C:\Users\Sami\Desktop\CSM\Proyecto-Gimnasio-Visual-C--main\Capa Datos\bin\Debug\Capa Datos.dll
+C:\Users\Sami\Desktop\CSM\Proyecto-Gimnasio-Visual-C--main\Capa Datos\bin\Debug\Capa Datos.pdb
+C:\Users\Sami\Desktop\CSM\Proyecto-Gimnasio-Visual-C--main\Capa Datos\obj\Debug\Capa Datos.csproj.CoreCompileInputs.cache
+C:\Users\Sami\Desktop\CSM\Proyecto-Gimnasio-Visual-C--main\Capa Datos\obj\Debug\Capa Datos.dll
+C:\Users\Sami\Desktop\CSM\Proyecto-Gimnasio-Visual-C--main\Capa Datos\obj\Debug\Capa Datos.pdb
+C:\Users\Sami\Desktop\CSM\Sistema Desktop CSM\Capa Datos\bin\Debug\Capa Datos.dll
+C:\Users\Sami\Desktop\CSM\Sistema Desktop CSM\Capa Datos\bin\Debug\Capa Datos.pdb
+C:\Users\Sami\Desktop\CSM\Sistema Desktop CSM\Capa Datos\obj\Debug\Capa Datos.csprojAssemblyReference.cache
+C:\Users\Sami\Desktop\CSM\Sistema Desktop CSM\Capa Datos\obj\Debug\Capa Datos.csproj.CoreCompileInputs.cache
+C:\Users\Sami\Desktop\CSM\Sistema Desktop CSM\Capa Datos\obj\Debug\Capa Datos.dll
+C:\Users\Sami\Desktop\CSM\Sistema Desktop CSM\Capa Datos\obj\Debug\Capa Datos.pdb
+C:\Users\lionm\Desktop\Sistema Desktop CSM\Capa Datos\bin\Debug\Capa Datos.dll
+C:\Users\lionm\Desktop\Sistema Desktop CSM\Capa Datos\bin\Debug\Capa Datos.pdb
+C:\Users\lionm\Desktop\Sistema Desktop CSM\Capa Datos\obj\Debug\Capa Datos.csproj.AssemblyReference.cache
+C:\Users\lionm\Desktop\Sistema Desktop CSM\Capa Datos\obj\Debug\Capa Datos.csproj.CoreCompileInputs.cache
+C:\Users\lionm\Desktop\Sistema Desktop CSM\Capa Datos\obj\Debug\Capa Datos.dll
+C:\Users\lionm\Desktop\Sistema Desktop CSM\Capa Datos\obj\Debug\Capa Datos.pdb
+C:\Users\Apoyo Logistico\Desktop\Sistema Desktop CSM\Capa Datos\bin\Debug\Capa Datos.dll
+C:\Users\Apoyo Logistico\Desktop\Sistema Desktop CSM\Capa Datos\bin\Debug\Capa Datos.pdb
+C:\Users\Apoyo Logistico\Desktop\Sistema Desktop CSM\Capa Datos\obj\Debug\Capa Datos.csprojAssemblyReference.cache
+C:\Users\Apoyo Logistico\Desktop\Sistema Desktop CSM\Capa Datos\obj\Debug\Capa Datos.csproj.CoreCompileInputs.cache
+C:\Users\Apoyo Logistico\Desktop\Sistema Desktop CSM\Capa Datos\obj\Debug\Capa Datos.dll
+C:\Users\Apoyo Logistico\Desktop\Sistema Desktop CSM\Capa Datos\obj\Debug\Capa Datos.pdb
+C:\Users\Sami\Desktop\Sistema Desktop CSM\Capa Datos\bin\Debug\Capa Datos.dll
+C:\Users\Sami\Desktop\Sistema Desktop CSM\Capa Datos\bin\Debug\Capa Datos.pdb
+C:\Users\Sami\Desktop\Sistema Desktop CSM\Capa Datos\obj\Debug\Capa Datos.csprojAssemblyReference.cache
+C:\Users\Sami\Desktop\Sistema Desktop CSM\Capa Datos\obj\Debug\Capa Datos.csproj.CoreCompileInputs.cache
+C:\Users\Sami\Desktop\Sistema Desktop CSM\Capa Datos\obj\Debug\Capa Datos.dll
+C:\Users\Sami\Desktop\Sistema Desktop CSM\Capa Datos\obj\Debug\Capa Datos.pdb
+C:\Users\leonel\Desktop\Sistema Desktop CSM\Capa Datos\bin\Debug\Capa Datos.dll
+C:\Users\leonel\Desktop\Sistema Desktop CSM\Capa Datos\bin\Debug\Capa Datos.pdb
+C:\Users\leonel\Desktop\Sistema Desktop CSM\Capa Datos\obj\Debug\Capa Datos.csprojAssemblyReference.cache
+C:\Users\leonel\Desktop\Sistema Desktop CSM\Capa Datos\obj\Debug\Capa Datos.csproj.CoreCompileInputs.cache
+C:\Users\leonel\Desktop\Sistema Desktop CSM\Capa Datos\obj\Debug\Capa Datos.dll
+C:\Users\leonel\Desktop\Sistema Desktop CSM\Capa Datos\obj\Debug\Capa Datos.pdb
+D:\Sistema Desktop CSM\Capa Datos\bin\Debug\Capa Datos.dll
+D:\Sistema Desktop CSM\Capa Datos\bin\Debug\Capa Datos.pdb
+D:\Sistema Desktop CSM\Capa Datos\obj\Debug\Capa Datos.csprojAssemblyReference.cache
+D:\Sistema Desktop CSM\Capa Datos\obj\Debug\Capa Datos.csproj.CoreCompileInputs.cache
+D:\Sistema Desktop CSM\Capa Datos\obj\Debug\Capa Datos.dll
+D:\Sistema Desktop CSM\Capa Datos\obj\Debug\Capa Datos.pdb

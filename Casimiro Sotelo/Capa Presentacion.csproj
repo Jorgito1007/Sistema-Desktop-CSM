@@ -1,0 +1,439 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C9EA55A3-6B12-4F70-A9FF-99CF750792B2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Ginmasio</RootNamespace>
+    <AssemblyName>Ginmasio</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>C:\Users\Sami\Desktop\Sistema Desktop CSM\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>9916D0E167600D4416DAEECF3AEF324B42C297D3</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Capa Presentacion_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icono_CSM.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bienvenida_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bienvenida_Login.Designer.cs">
+      <DependentUpon>Bienvenida_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Alerta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Alerta.Designer.cs">
+      <DependentUpon>Frm_Alerta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Calificaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Calificaciones.Designer.cs">
+      <DependentUpon>Frm_Calificaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Docente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Docente.Designer.cs">
+      <DependentUpon>Frm_Docente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_GrupDoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_GrupDoc.Designer.cs">
+      <DependentUpon>Frm_GrupDoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Login.Designer.cs">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_LogoReloj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_LogoReloj.Designer.cs">
+      <DependentUpon>Frm_LogoReloj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Cliente.Designer.cs">
+      <DependentUpon>Frm_Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Registro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Registro.Designer.cs">
+      <DependentUpon>Frm_Registro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mensaje_Suscripcion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mensaje_Suscripcion.Designer.cs">
+      <DependentUpon>Mensaje_Suscripcion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Frm_Inicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Inicio.Designer.cs">
+      <DependentUpon>Frm_Inicio.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Bienvenida_Login.resx">
+      <DependentUpon>Bienvenida_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Alerta.resx">
+      <DependentUpon>Frm_Alerta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Calificaciones.resx">
+      <DependentUpon>Frm_Calificaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Docente.resx">
+      <DependentUpon>Frm_Docente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_GrupDoc.resx">
+      <DependentUpon>Frm_GrupDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Login.resx">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_LogoReloj.resx">
+      <DependentUpon>Frm_LogoReloj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Cliente.resx">
+      <DependentUpon>Frm_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Registro.resx">
+      <DependentUpon>Frm_Registro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mensaje_Suscripcion.resx">
+      <DependentUpon>Mensaje_Suscripcion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Frm_Inicio.resx">
+      <DependentUpon>Frm_Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Capa Presentacion_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Capa Negocio\Capa Negocio.csproj">
+      <Project>{f2f85c75-5970-45e8-868f-73bd1422b519}</Project>
+      <Name>Capa Negocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cliente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User_Group-80_icon-icons.com_57247.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users_people_workers_customers_icon_124243.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\effective_employees_users_team_group_icon_152042.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\productapplication_producto_3010.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4105931-add-to-cart-buy-cart-sell-shop-shopping-cart_113919.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thefreeforty_register_icon-icons.com_66338.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4115235-exit-logout-sign-out_114030.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zona_Fitr-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\registro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_button_close_delete_icon_124197.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit_121846.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\068minimize_100011.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contact_96967.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contact_96967 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4213411-cancel-circle-close-delete-remove-trash_115399.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic-cancel_97589.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize_filled_icon_199783.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize_filled_icon_1997831.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\window_minimize_icon_198334.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize_filled_icon_199783 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resize_minimize_maximize_expand_screen_icon_190602.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resize_minimize_maximize_expand_screen_icon_190600.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clientes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pagos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\producto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Recurso 1producto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Recurso 4producto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\venta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\empleados.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\compras.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reportes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\productividad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\productividad %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ventas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\suscripcion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\costo-de-envio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\empresario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sitio-web.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\repartidor %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paquetes %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\configuraciones.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lista-de-verificacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lista-de-verificacion1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marca.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subcarpeta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\acceso.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrar-sesion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Marvin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\la-busqueda-de-empleo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barra-de-busqueda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iniciar-sesion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\candado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\perfil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\perfil %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cambiar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\documento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salida.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salida %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salida %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo software_Logo UNCSM, Version Colores.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo software_Logo UNCSM, Version Colores1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo software_Logo UNCSM, Version Colores2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icono_CSM.ico" />
+    <None Include="Resources\multitud.png" />
+    <None Include="Resources\maestro.png" />
+    <None Include="Resources\notas.png" />
+    <None Include="Resources\menu-three-outlined-rounded-lines-symbol_icon-icons.com_732151.png" />
+    <None Include="Resources\menu-three-outlined-rounded-lines-symbol_icon-icons.com_73215.png" />
+    <None Include="Resources\usuario1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
