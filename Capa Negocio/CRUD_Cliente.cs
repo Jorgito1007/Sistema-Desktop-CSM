@@ -32,6 +32,99 @@ namespace Capa_Negocio
             return Tabla_Estudiante; // retorno de la tabla 
         }
 
+        public DataTable Mostrar_Etnia()
+        {
+            DataTable Tabla_Etnia = new DataTable(); //Instancia de un ojeto de tipo DataTable para recibir la tabla que devuelde el objeto SqlDataAdapter
+            conexion.conexion_datos.Open(); //se abre la conexion para el comando
+            Comando = new SqlCommand(); //instancia del objeto de tipo sqlcommando
+            Comando.CommandText = "SP_MOSTRAR_ETNIA"; //se pasa el procedimiento almancenado
+            Comando.Connection = conexion.conexion_datos; // se abre la conexion para el comando
+            Adaptador = new SqlDataAdapter(Comando); //se reciebe la tabla producto de la ejecucion del procedimiento
+            Adaptador.Fill(Tabla_Etnia); // con el SqlDataAdapter se llena la tabla
+            conexion.conexion_datos.Close(); // se cierra la conexion
+            return Tabla_Etnia; // retorno de la tabla 
+        }
+
+        public DataTable Mostrar_Estado_Civil()
+        {
+            DataTable Tabla = new DataTable(); //Instancia de un ojeto de tipo DataTable para recibir la tabla que devuelde el objeto SqlDataAdapter
+            conexion.conexion_datos.Open(); //se abre la conexion para el comando
+            Comando = new SqlCommand(); //instancia del objeto de tipo sqlcommando
+            Comando.CommandText = "SP_MOSTRAR_ESTADO_CIVIL"; //se pasa el procedimiento almancenado
+            Comando.Connection = conexion.conexion_datos; // se abre la conexion para el comando
+            Adaptador = new SqlDataAdapter(Comando); //se reciebe la tabla producto de la ejecucion del procedimiento
+            Adaptador.Fill(Tabla); // con el SqlDataAdapter se llena la tabla
+            conexion.conexion_datos.Close(); // se cierra la conexion
+            return Tabla; // retorno de la tabla 
+        }
+
+        public DataTable Mostrar_Sexo()
+        {
+            DataTable Tabla = new DataTable(); //Instancia de un ojeto de tipo DataTable para recibir la tabla que devuelde el objeto SqlDataAdapter
+            conexion.conexion_datos.Open(); //se abre la conexion para el comando
+            Comando = new SqlCommand(); //instancia del objeto de tipo sqlcommando
+            Comando.CommandText = "SP_MOSTRAR_SEXO"; //se pasa el procedimiento almancenado
+            Comando.Connection = conexion.conexion_datos; // se abre la conexion para el comando
+            Adaptador = new SqlDataAdapter(Comando); //se reciebe la tabla producto de la ejecucion del procedimiento
+            Adaptador.Fill(Tabla); // con el SqlDataAdapter se llena la tabla
+            conexion.conexion_datos.Close(); // se cierra la conexion
+            return Tabla; // retorno de la tabla 
+        }
+
+        public DataTable Mostrar_Departamento()
+        {
+            DataTable Tabla = new DataTable(); //Instancia de un ojeto de tipo DataTable para recibir la tabla que devuelde el objeto SqlDataAdapter
+            conexion.conexion_datos.Open(); //se abre la conexion para el comando
+            Comando = new SqlCommand(); //instancia del objeto de tipo sqlcommando
+            Comando.CommandText = "SP_MOSTRAR_DEPARTAMENTO"; //se pasa el procedimiento almancenado
+            Comando.Connection = conexion.conexion_datos; // se abre la conexion para el comando
+            Adaptador = new SqlDataAdapter(Comando); //se reciebe la tabla producto de la ejecucion del procedimiento
+            Adaptador.Fill(Tabla); // con el SqlDataAdapter se llena la tabla
+            conexion.conexion_datos.Close(); // se cierra la conexion
+            return Tabla; // retorno de la tabla 
+        }
+
+        public DataTable Mostrar_Municipio(int ID_Departamento)
+        {
+            DataTable Tabla = new DataTable(); //Instancia de un ojeto de tipo DataTable para recibir la tabla que devuelde el objeto SqlDataAdapter
+            conexion.conexion_datos.Open(); //se abre la conexion para el comando
+            Comando = new SqlCommand(); //instancia del objeto de tipo sqlcommando
+            Comando.CommandText = "SP_MOSTRAR_MUNICIPIO"; //se pasa el procedimiento almancenado
+            Comando.CommandType = System.Data.CommandType.StoredProcedure;
+            Comando.Parameters.Add(new SqlParameter("ID_DEPARTAMENTO", System.Data.SqlDbType.Int)).Value = ID_Departamento;
+            Comando.Connection = conexion.conexion_datos; // se abre la conexion para el comando
+            Adaptador = new SqlDataAdapter(Comando); //se reciebe la tabla producto de la ejecucion del procedimiento
+            Adaptador.Fill(Tabla); // con el SqlDataAdapter se llena la tabla
+            conexion.conexion_datos.Close(); // se cierra la conexion
+            return Tabla; // retorno de la tabla 
+        }
+
+
+        public DataTable Mostrar_Proveedor_Internet()
+        {
+            DataTable Tabla = new DataTable(); //Instancia de un ojeto de tipo DataTable para recibir la tabla que devuelde el objeto SqlDataAdapter
+            conexion.conexion_datos.Open(); //se abre la conexion para el comando
+            Comando = new SqlCommand(); //instancia del objeto de tipo sqlcommando
+            Comando.CommandText = "SP_MOSTRA_PROVEEDOR"; //se pasa el procedimiento almancenado
+            Comando.Connection = conexion.conexion_datos; // se abre la conexion para el comando
+            Adaptador = new SqlDataAdapter(Comando); //se reciebe la tabla producto de la ejecucion del procedimiento
+            Adaptador.Fill(Tabla); // con el SqlDataAdapter se llena la tabla
+            conexion.conexion_datos.Close(); // se cierra la conexion
+            return Tabla; // retorno de la tabla 
+        }
+
+        public DataTable Mostrar_Discapacidad()
+        {
+            DataTable Tabla = new DataTable(); //Instancia de un ojeto de tipo DataTable para recibir la tabla que devuelde el objeto SqlDataAdapter
+            conexion.conexion_datos.Open(); //se abre la conexion para el comando
+            Comando = new SqlCommand(); //instancia del objeto de tipo sqlcommando
+            Comando.CommandText = "SP_DISCAPACIDAD"; //se pasa el procedimiento almancenado
+            Comando.Connection = conexion.conexion_datos; // se abre la conexion para el comando
+            Adaptador = new SqlDataAdapter(Comando); //se reciebe la tabla producto de la ejecucion del procedimiento
+            Adaptador.Fill(Tabla); // con el SqlDataAdapter se llena la tabla
+            conexion.conexion_datos.Close(); // se cierra la conexion
+            return Tabla; // retorno de la tabla 
+        }
 
 
 

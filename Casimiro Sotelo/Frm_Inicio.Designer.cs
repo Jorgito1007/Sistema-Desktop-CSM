@@ -54,6 +54,9 @@
             this.pcLogo = new System.Windows.Forms.PictureBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.Panel_Contenedor = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.Panel_superior.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_normalizar_todo)).BeginInit();
@@ -98,8 +101,8 @@
             // btn_normalizar_todo
             // 
             this.btn_normalizar_todo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_normalizar_todo.Image = global::Ginmasio.Properties.Resources._068minimize_100011;
-            this.btn_normalizar_todo.Location = new System.Drawing.Point(244, 6);
+            this.btn_normalizar_todo.Image = global::UNCSM.Properties.Resources.resize_minimize_maximize_expand_screen_icon_190602;
+            this.btn_normalizar_todo.Location = new System.Drawing.Point(244, 5);
             this.btn_normalizar_todo.Name = "btn_normalizar_todo";
             this.btn_normalizar_todo.Size = new System.Drawing.Size(20, 20);
             this.btn_normalizar_todo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -111,7 +114,7 @@
             // btn_Minimizar_Todo
             // 
             this.btn_Minimizar_Todo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Minimizar_Todo.Image = global::Ginmasio.Properties.Resources.window_minimize_icon_198334;
+            this.btn_Minimizar_Todo.Image = global::UNCSM.Properties.Resources.window_minimize_icon_198334;
             this.btn_Minimizar_Todo.Location = new System.Drawing.Point(218, 7);
             this.btn_Minimizar_Todo.Name = "btn_Minimizar_Todo";
             this.btn_Minimizar_Todo.Size = new System.Drawing.Size(20, 20);
@@ -123,7 +126,7 @@
             // bnt_Cerrar_todo
             // 
             this.bnt_Cerrar_todo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bnt_Cerrar_todo.Image = global::Ginmasio.Properties.Resources.ic_cancel_97589;
+            this.bnt_Cerrar_todo.Image = global::UNCSM.Properties.Resources.ic_cancel_97589;
             this.bnt_Cerrar_todo.Location = new System.Drawing.Point(270, 7);
             this.bnt_Cerrar_todo.Name = "bnt_Cerrar_todo";
             this.bnt_Cerrar_todo.Size = new System.Drawing.Size(20, 20);
@@ -139,7 +142,7 @@
             this.LbUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
             this.LbUsuario.Location = new System.Drawing.Point(31, 5);
             this.LbUsuario.Name = "LbUsuario";
-            this.LbUsuario.Size = new System.Drawing.Size(67, 16);
+            this.LbUsuario.Size = new System.Drawing.Size(66, 16);
             this.LbUsuario.TabIndex = 1;
             this.LbUsuario.Text = "ldUsuario";
             this.LbUsuario.Click += new System.EventHandler(this.LbUsuario_Click);
@@ -147,7 +150,7 @@
             // btn_maximizar_todo
             // 
             this.btn_maximizar_todo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_maximizar_todo.Image = global::Ginmasio.Properties.Resources.resize_minimize_maximize_expand_screen_icon_190600;
+            this.btn_maximizar_todo.Image = global::UNCSM.Properties.Resources.resize_minimize_maximize_expand_screen_icon_190600;
             this.btn_maximizar_todo.Location = new System.Drawing.Point(244, 7);
             this.btn_maximizar_todo.Name = "btn_maximizar_todo";
             this.btn_maximizar_todo.Size = new System.Drawing.Size(20, 20);
@@ -159,7 +162,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox2.Image = global::Ginmasio.Properties.Resources.perfil__1_;
+            this.pictureBox2.Image = global::UNCSM.Properties.Resources.perfil;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(25, 28);
@@ -182,6 +185,9 @@
             // Panel_Menu
             // 
             this.Panel_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(127)))), ((int)(((byte)(180)))));
+            this.Panel_Menu.Controls.Add(this.panel7);
+            this.Panel_Menu.Controls.Add(this.panel6);
+            this.Panel_Menu.Controls.Add(this.panel5);
             this.Panel_Menu.Controls.Add(this.button3);
             this.Panel_Menu.Controls.Add(this.button2);
             this.Panel_Menu.Controls.Add(this.button1);
@@ -207,7 +213,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Image = global::Ginmasio.Properties.Resources.multitud;
+            this.button3.Image = global::UNCSM.Properties.Resources.multitud;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.Location = new System.Drawing.Point(4, 254);
             this.button3.Name = "button3";
@@ -225,7 +231,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Image = global::Ginmasio.Properties.Resources.maestro;
+            this.button2.Image = global::UNCSM.Properties.Resources.maestro;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(3, 218);
             this.button2.Name = "button2";
@@ -243,7 +249,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Image = global::Ginmasio.Properties.Resources.notas;
+            this.button1.Image = global::UNCSM.Properties.Resources.notas;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(4, 290);
             this.button1.Name = "button1";
@@ -255,7 +261,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Ginmasio.Properties.Resources.menu_three_outlined_rounded_lines_symbol_icon_icons1;
+            this.pictureBox1.Image = global::UNCSM.Properties.Resources.menu_three_outlined_rounded_lines_symbol_icon_icons_com_73215;
             this.pictureBox1.Location = new System.Drawing.Point(6, 6);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(30, 26);
@@ -280,7 +286,7 @@
             this.lbCarga.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
             this.lbCarga.Location = new System.Drawing.Point(0, 7);
             this.lbCarga.Name = "lbCarga";
-            this.lbCarga.Size = new System.Drawing.Size(130, 16);
+            this.lbCarga.Size = new System.Drawing.Size(129, 16);
             this.lbCarga.TabIndex = 20;
             this.lbCarga.Text = "Por favor espere...";
             this.lbCarga.Visible = false;
@@ -296,13 +302,12 @@
             // bntAsistencia
             // 
             this.bntAsistencia.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bntAsistencia.Enabled = false;
             this.bntAsistencia.FlatAppearance.BorderSize = 0;
             this.bntAsistencia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(97)))), ((int)(((byte)(141)))));
             this.bntAsistencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bntAsistencia.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bntAsistencia.ForeColor = System.Drawing.Color.Black;
-            this.bntAsistencia.Image = global::Ginmasio.Properties.Resources.lista_de_verificacion;
+            this.bntAsistencia.Image = global::UNCSM.Properties.Resources.lista_de_verificacion1;
             this.bntAsistencia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bntAsistencia.Location = new System.Drawing.Point(3, 151);
             this.bntAsistencia.Name = "bntAsistencia";
@@ -338,7 +343,7 @@
             this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClientes.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClientes.ForeColor = System.Drawing.Color.Black;
-            this.btnClientes.Image = global::Ginmasio.Properties.Resources.agregar;
+            this.btnClientes.Image = global::UNCSM.Properties.Resources.agregar;
             this.btnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClientes.Location = new System.Drawing.Point(6, 184);
             this.btnClientes.Name = "btnClientes";
@@ -351,7 +356,7 @@
             // pcLogo
             // 
             this.pcLogo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pcLogo.Image = global::Ginmasio.Properties.Resources.logo_software_Logo_UNCSM__Version_Colores1;
+            this.pcLogo.Image = global::UNCSM.Properties.Resources.logo_software_Logo_UNCSM__Version_Colores2;
             this.pcLogo.Location = new System.Drawing.Point(12, 6);
             this.pcLogo.Name = "pcLogo";
             this.pcLogo.Size = new System.Drawing.Size(138, 139);
@@ -371,6 +376,33 @@
             this.Panel_Contenedor.Name = "Panel_Contenedor";
             this.Panel_Contenedor.Size = new System.Drawing.Size(1028, 641);
             this.Panel_Contenedor.TabIndex = 5;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(97)))), ((int)(((byte)(141)))));
+            this.panel5.Location = new System.Drawing.Point(0, 220);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(5, 29);
+            this.panel5.TabIndex = 4;
+            this.panel5.Visible = false;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(97)))), ((int)(((byte)(141)))));
+            this.panel6.Location = new System.Drawing.Point(0, 255);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(5, 29);
+            this.panel6.TabIndex = 4;
+            this.panel6.Visible = false;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(97)))), ((int)(((byte)(141)))));
+            this.panel7.Location = new System.Drawing.Point(0, 291);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(5, 29);
+            this.panel7.TabIndex = 4;
+            this.panel7.Visible = false;
             // 
             // Frm_Inicio
             // 
@@ -432,5 +464,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel5;
     }
 }

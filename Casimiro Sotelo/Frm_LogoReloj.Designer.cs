@@ -65,7 +65,7 @@
             // 
             // pc_Logo
             // 
-            this.pc_Logo.Image = global::Ginmasio.Properties.Resources.logo_software_Logo_UNCSM__Version_Colores;
+            this.pc_Logo.Image = global::UNCSM.Properties.Resources.logo_software_Logo_UNCSM__Version_Colores1;
             this.pc_Logo.Location = new System.Drawing.Point(544, 1);
             this.pc_Logo.Name = "pc_Logo";
             this.pc_Logo.Size = new System.Drawing.Size(405, 390);

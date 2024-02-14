@@ -79,3 +79,12 @@ D:\Sistema Desktop CSM\Capa Negocio\obj\Debug\Capa Negocio.csproj.CoreCompileInp
 D:\Sistema Desktop CSM\Capa Negocio\obj\Debug\Capa Negocio.csproj.CopyComplete
 D:\Sistema Desktop CSM\Capa Negocio\obj\Debug\Capa Negocio.dll
 D:\Sistema Desktop CSM\Capa Negocio\obj\Debug\Capa Negocio.pdb
+C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Capa Negocio\bin\Debug\Capa Negocio.dll
+C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Capa Negocio\bin\Debug\Capa Negocio.pdb
+C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Capa Negocio\bin\Debug\Capa Datos.dll
+C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Capa Negocio\bin\Debug\Capa Datos.pdb
+C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Capa Negocio\obj\Debug\Capa Negocio.csproj.AssemblyReference.cache
+C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Capa Negocio\obj\Debug\Capa Negocio.csproj.CoreCompileInputs.cache
+C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Capa Negocio\obj\Debug\Capa Negocio.csproj.CopyComplete
+C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Capa Negocio\obj\Debug\Capa Negocio.dll
+C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Capa Negocio\obj\Debug\Capa Negocio.pdb

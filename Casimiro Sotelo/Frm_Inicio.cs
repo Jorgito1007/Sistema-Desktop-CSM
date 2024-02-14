@@ -324,7 +324,9 @@ namespace Ginmasio
 
         private void bntAsistencia_Click(object sender, EventArgs e)
         {
-            abrirFormHijo(new Frm_Cliente());
+            //abrirFormHijo(new Frm_Cliente());
+            abrirFormHijo(new Matricula());
+
         }
 
 

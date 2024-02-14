@@ -229,3 +229,33 @@ D:\Sistema Desktop CSM\Casimiro Sotelo\obj\Debug\Ginmasio.exe
 D:\Sistema Desktop CSM\Casimiro Sotelo\obj\Debug\Ginmasio.pdb
 D:\Sistema Desktop CSM\Casimiro Sotelo\obj\Debug\Ginmasio.Frm_Calificaciones.resources
 D:\Sistema Desktop CSM\Casimiro Sotelo\obj\Debug\Ginmasio.Frm_GrupDoc.resources
+C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\Capa Presentacion.csproj.AssemblyReference.cache
+C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\Ginmasio.Bienvenida_Login.resources
+C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\Ginmasio.Frm_Alerta.resources
+C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\Ginmasio.Frm_Calificaciones.resources
+C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\Ginmasio.Frm_Docente.resources
+C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\Ginmasio.Frm_GrupDoc.resources
+C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\Ginmasio.Frm_Login.resources
+C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\Ginmasio.Frm_LogoReloj.resources
+C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\Ginmasio.Frm_Cliente.resources
+C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\Ginmasio.Frm_Registro.resources
+C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\Ginmasio.Mensaje_Suscripcion.resources
+C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\UNCSM.Properties.Resources.resources
+C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\Ginmasio.Frm_Inicio.resources
+C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\Capa Presentacion.csproj.GenerateResource.cache
+C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\Capa Presentacion.csproj.CoreCompileInputs.cache
+C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\bin\Debug\UNCSM.exe.config
+C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\bin\Debug\UNCSM.exe.manifest
+C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\bin\Debug\UNCSM.application
+C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\bin\Debug\UNCSM.exe
+C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\bin\Debug\UNCSM.pdb
+C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\bin\Debug\Capa Negocio.dll
+C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\bin\Debug\Capa Datos.dll
+C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\bin\Debug\Capa Negocio.pdb
+C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\bin\Debug\Capa Datos.pdb
+C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\UNCSM.exe.manifest
+C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\UNCSM.application
+C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\Capa Presentacion.csproj.CopyComplete
+C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\UNCSM.exe
+C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\UNCSM.pdb
+C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\Ginmasio.Matricula.resources
