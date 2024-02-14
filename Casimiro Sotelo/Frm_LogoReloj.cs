@@ -42,7 +42,7 @@ namespace Ginmasio
         private void hora_fecha_Tick(object sender, EventArgs e)  //Metoo tipo Tick, para establecer la hora y fecha actual del servidor
         {
             lbHora.Text = DateTime.Now.ToString("hh:mm:ss"); // Hora actual
-            lbFecha.Text = DateTime.Now.ToLongDateString(); // fecha actual , formato largo
+            lbFecha.Text = DateTime.Now.ToLongDateString().ToUpper(); // fecha actual , formato largo
             centrar_Contenido();//llamado del metodo para centrar los componentes
         }
     }

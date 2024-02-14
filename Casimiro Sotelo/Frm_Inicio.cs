@@ -11,13 +11,16 @@ using System.Runtime.InteropServices;
 using System.Media;
 using System.Threading;
 using Capa_Negocio;
+using UNCSM;
 
 namespace Ginmasio
 {
+    
     public partial class Frm_Inicio : Form
     {
         public static string n, a,Cedula_Empleado;
         Frm_Login ventana_login = new Frm_Login();
+        FrmSalida ventana_salida = new FrmSalida();
         campus CargaRegistroMatricula = new campus();
 
         //DataTable llenar()
@@ -158,10 +161,12 @@ namespace Ginmasio
 
         private void bnt_Cerrar_todo_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿ESTA SEGURO QUE DESEA SALIR", "ATENCION", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == (System.Windows.Forms.DialogResult.Yes))
-            {
-                Environment.Exit(0);
-            }
+            ventana_salida.ShowDialog();
+
+            //if (MessageBox.Show("¿ESTA SEGURO QUE DESEA SALIR", "ATENCION", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == (System.Windows.Forms.DialogResult.Yes))
+            //{
+            //    Environment.Exit(0);
+            //}
         }
         //-----------BOTONES DE MINIMIZAR, MAXIMIZAR Y CERRAR-------FIN--------//
 

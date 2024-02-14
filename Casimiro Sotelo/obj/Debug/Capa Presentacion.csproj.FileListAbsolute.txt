@@ -259,3 +259,4 @@ C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-
 C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\UNCSM.exe
 C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\UNCSM.pdb
 C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\Ginmasio.Matricula.resources
+C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\UNCSM.FrmSalida.resources

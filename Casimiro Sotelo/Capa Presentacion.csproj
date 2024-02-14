@@ -91,6 +91,12 @@
     <Compile Include="Bienvenida_Login.Designer.cs">
       <DependentUpon>Bienvenida_Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmSalida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSalida.Designer.cs">
+      <DependentUpon>FrmSalida.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Alerta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +167,9 @@
     </Compile>
     <EmbeddedResource Include="Bienvenida_Login.resx">
       <DependentUpon>Bienvenida_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSalida.resx">
+      <DependentUpon>FrmSalida.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Alerta.resx">
       <DependentUpon>Frm_Alerta.cs</DependentUpon>
@@ -436,6 +445,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icono_CSM.ico" />
+    <None Include="Resources\persona-clave.png" />
+    <None Include="Resources\trabajando.png" />
+    <None Include="Resources\controlar.png" />
+    <None Include="Resources\crisis.png" />
+    <None Include="Resources\UNCSM _Logo UNCSM, Version Colores.png" />
+    <None Include="Resources\sitio-web %281%29.png" />
+    <None Include="Resources\sitio-web1.png" />
+    <None Include="Resources\programa.png" />
+    <None Include="Resources\business_application_addmale_useradd_insert_add_user_client_23121.png" />
+    <None Include="Resources\business_application_addmale_useradd_insert_add_user_client_2312.png" />
     <None Include="Resources\multitud.png" />
     <None Include="Resources\maestro.png" />
     <None Include="Resources\notas.png" />

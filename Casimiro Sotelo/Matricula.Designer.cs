@@ -224,6 +224,7 @@
             this.TabDatos.SelectedIndex = 0;
             this.TabDatos.Size = new System.Drawing.Size(1195, 615);
             this.TabDatos.TabIndex = 0;
+            this.TabDatos.TabStop = false;
             this.TabDatos.Tag = "";
             // 
             // TabPersonales

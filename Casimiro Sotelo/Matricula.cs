@@ -375,6 +375,87 @@ namespace Ginmasio
                 epEtnia.Clear();
             }
 
+
+            if (cbSexo.SelectedIndex == -1)
+            {
+                epSexo.SetError(cbSexo, "SELECCIONE SEXO, ¡ES UN CAMPO OBLIGATORIO!");
+            }
+
+            else
+            {
+                epSexo.Clear();
+            }
+
+
+            if (cbDepartamento.SelectedIndex == -1)
+            {
+                epDepartamento.SetError(cbDepartamento, "SELECCIONE DEPARTAMENTO, ¡ES UN CAMPO OBLIGATORIO!");
+            }
+
+            else
+            {
+                epDepartamento.Clear();
+            }
+
+            if (cbMunicipio.SelectedIndex == -1)
+            {
+                epMunicipio.SetError(cbMunicipio, "SELECCIONE MUNICIPIO, ¡ES UN CAMPO OBLIGATORIO!");
+            }
+
+            else
+            {
+                epMunicipio.Clear();
+            }
+
+            if (txtDireccion.Text == string.Empty)
+            {
+                epDireccion.SetError(txtPrimerNombre, "INGRESE DIRECCION, ¡ES UN CAMPO OBLIGATORIO!");
+            }
+            else
+            {
+                epDireccion.Clear();
+            }
+
+            if (txtBarrio.Text == string.Empty)
+            {
+                epBarrio.SetError(txtPrimerNombre, "INGRESE BARRIO O COMARCA, ¡ES UN CAMPO OBLIGATORIO!");
+            }
+            else
+            {
+                epBarrio.Clear();
+            }
+
+
+            if (cbAccesoInternet.SelectedIndex == -1)
+            {
+                epAccesoInternet.SetError(cbAccesoInternet, "SELECCIONE OPCION, ¡ES UN CAMPO OBLIGATORIO!");
+            }
+
+            else
+            {
+                epAccesoInternet.Clear();
+            }
+
+            if (cbMano.SelectedIndex == -1)
+            {
+                epZurdoDiestro.SetError(cbMano, "SELECCIONE OPCION, ¡ES UN CAMPO OBLIGATORIO!");
+            }
+
+            else
+            {
+                epZurdoDiestro.Clear();
+            }
+
+            if (cbDiscapacidad.SelectedIndex == -1)
+            {
+                epDiscapacidad.SetError(cbDiscapacidad, "SELECCIONE DISCAPACIDAD, ¡ES UN CAMPO OBLIGATORIO!");
+            }
+
+            else
+            {
+                epDiscapacidad.Clear();
+            }
+
         }
     }
 }
