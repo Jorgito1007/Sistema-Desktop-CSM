@@ -19,7 +19,10 @@ namespace Ginmasio
     {
         CRUD_Cliente prematricula = new CRUD_Cliente();
         DataTable tbl_Departamento = new DataTable(); //DataTable para almacenar los departamentos
+        DataTable tbl_Departamento02 = new DataTable(); //DataTable para almacenar los departamentos
         DataTable tbl_Municipio = new DataTable();  //DataTable para almacenar los municipios en base al ID de cada Departamento
+        DataTable tbl_Municipio02 = new DataTable();  //DataTable para almacenar los municipios en base al ID de cada Departamento
+        DataTable tbl_Centro_Estudios = new DataTable();  //DataTable para almacenar los centros de estudios segun cada municipio
         DataTable Table = new DataTable();
         DataTable tbl_Discapacidad = new DataTable();
         Frm_Mensaje_Advertencia mensaje;
@@ -32,9 +35,12 @@ namespace Ginmasio
             llenar_Estado_Civil();
             llenar_Sexo();
             llenar_Departamento();
+            llenar_Departamento02();
             llenar_mano();
             llenarAccesoInternet();
             llenarDiscapacidad();
+            llenarTipoBachillerato();
+            llenar_anio();
 
             txtCedula.TextChanged += ConvertirAMayusculas;
             txtPrimerNombre.TextChanged += ConvertirAMayusculas;
@@ -184,6 +190,11 @@ namespace Ginmasio
                 txtQuimi5.Clear();
                 txtQuimi5.Focus();
             }
+            else
+            {
+                Calcular_Promedio();
+            }
+
         }
 
         private void cbDepartamento_SelectedValueChanged(object sender, EventArgs e)
@@ -238,6 +249,7 @@ namespace Ginmasio
             if (ValidarCamposTab01() == true)
             {
                 btnSiguiente01.Enabled = true;
+                valida_segundo_tab(true);
             }
             else
             {
@@ -388,6 +400,24 @@ namespace Ginmasio
             {
                 cbDepartamento.Items.Add(Convert.ToString(row["Nombre"]));
             }
+
+            tbl_Departamento02.Clear();
+            tbl_Departamento02 = prematricula.Mostrar_Departamento();
+            foreach (DataRow row in tbl_Departamento02.Rows)
+            {
+                cbDepartamento02.Items.Add(Convert.ToString(row["Nombre"]));
+            }
+        }
+
+        void llenar_Departamento02()
+        {
+
+            tbl_Departamento.Clear();
+            tbl_Departamento = prematricula.Mostrar_Departamento();
+            foreach (DataRow row in tbl_Departamento.Rows)
+            {
+                cbDepartamento02.Items.Add(Convert.ToString(row["Nombre"]));
+            }
         }
 
         void llenar_Sexo()
@@ -420,24 +450,76 @@ namespace Ginmasio
             }
         }
 
+        void llenar_anio() 
+        {
+            List<int> numeros = new List<int>();
+
+            for (int i = 1980; i <= 2024; i++)
+            {
+                numeros.Add(i);
+            }
+
+            // Invertir el orden de la lista
+            numeros.Reverse();
+
+            // Convertir los números a objetos y agregarlos al ComboBox
+            foreach (int numero in numeros)
+            {
+                cbAnioFin.Items.Add(numero);
+            }
+        }
+
+        void llenarTipoBachillerato()
+        {
+            tbl_Discapacidad = prematricula.Mostrar_Tipo_Bachillerato();
+            foreach (DataRow row in tbl_Discapacidad.Rows)
+            {
+                cbTipoBachillerato.Items.Add(Convert.ToString(row["tipo"]).ToUpper());
+            }
+        }
+
         public bool ValidarCamposTab01()
         {
             bool bandera = true;
 
             // Llamadas a las funciones para validar cada campo
-            bandera = ValidarCampo(txtCedula, epCedula, "INGRESE CÉDULA, ¡ES UN CAMPO OBLIGATORIO!");
-            bandera = ValidarCampo(txtPrimerNombre, epCedula, "INGRESE PRIMER NOMBRE, ¡ES UN CAMPO OBLIGATORIO!");
-            bandera = ValidarCampo(txtPrimerApellido, epPrimerApellido, "INGRESE PRIMER APELLIDO, ¡ES UN CAMPO OBLIGATORIO!");
-            bandera = ValidarComboBox(cbEtnia, epEtnia, "SELECCIONE ETNIA, ¡ES UN CAMPO OBLIGATORIO!");
-            bandera = ValidarComboBox(cbSexo, epSexo, "SELECCIONE SEXO, ¡ES UN CAMPO OBLIGATORIO!");
-            bandera = ValidarComboBox(cbDepartamento, epDepartamento, "SELECCIONE DEPARTAMENTO, ¡ES UN CAMPO OBLIGATORIO!");
-            bandera = ValidarComboBox(cbMunicipio, epMunicipio, "SELECCIONE MUNICIPIO, ¡ES UN CAMPO OBLIGATORIO!");
-            bandera = ValidarCampo(txtDireccion, epDireccion, "INGRESE DIRECCION, ¡ES UN CAMPO OBLIGATORIO!");
-            bandera = ValidarCampo(txtBarrio, epBarrio, "INGRESE BARRIO O COMARCA, ¡ES UN CAMPO OBLIGATORIO!");
-            bandera = ValidarComboBox(cbAccesoInternet, epAccesoInternet, "SELECCIONE OPCION, ¡ES UN CAMPO OBLIGATORIO!");
-            bandera = ValidarComboBox(cbMano, epZurdoDiestro, "SELECCIONE OPCION, ¡ES UN CAMPO OBLIGATORIO!");
-            bandera = ValidarComboBox(cbDiscapacidad, epDiscapacidad, "SELECCIONE DISCAPACIDAD, ¡ES UN CAMPO OBLIGATORIO!");
-            bandera = ValidarComboBox(cbEstadoCivil, epEstadoCivil, "SELECCIONE ESTADO CIVIL, ¡ES UN CAMPO OBLIGATORIO!");
+            if (false == ValidarCampo(txtCedula, epCedula, "INGRESE CÉDULA, ¡ES UN CAMPO OBLIGATORIO!"))
+                {
+                    bandera = false;
+                }
+            if (false == ValidarCampo(txtPrimerNombre, epCedula, "INGRESE PRIMER NOMBRE, ¡ES UN CAMPO OBLIGATORIO!"))
+                {
+                    bandera = false;
+                }
+            if (false == ValidarCampo(txtPrimerApellido, epPrimerApellido, "INGRESE PRIMER APELLIDO, ¡ES UN CAMPO OBLIGATORIO!"))
+                {   
+                    bandera = false; 
+                }
+            if (false == ValidarComboBox(cbEtnia, epEtnia, "SELECCIONE ETNIA, ¡ES UN CAMPO OBLIGATORIO!"))
+                {
+                    bandera = false;
+                }
+            if (false == ValidarComboBox(cbSexo, epSexo, "SELECCIONE SEXO, ¡ES UN CAMPO OBLIGATORIO!"))
+                { 
+                    bandera = true; 
+                }
+            if (false == ValidarComboBox(cbDepartamento, epDepartamento, "SELECCIONE DEPARTAMENTO, ¡ES UN CAMPO OBLIGATORIO!"))
+            { bandera = false; }
+           if ( false == ValidarComboBox(cbMunicipio, epMunicipio, "SELECCIONE MUNICIPIO, ¡ES UN CAMPO OBLIGATORIO!"))
+            { bandera = false; }
+            if (false == ValidarCampo(txtDireccion, epDireccion, "INGRESE DIRECCION, ¡ES UN CAMPO OBLIGATORIO!")) 
+            { bandera = false; }
+           if( false == ValidarCampo(txtBarrio, epBarrio, "INGRESE BARRIO O COMARCA, ¡ES UN CAMPO OBLIGATORIO!"))
+            { bandera = false; }
+           if (false == ValidarComboBox(cbAccesoInternet, epAccesoInternet, "SELECCIONE OPCION, ¡ES UN CAMPO OBLIGATORIO!"))
+            { bandera = false; }
+            if (false == ValidarComboBox(cbMano, epZurdoDiestro, "SELECCIONE OPCION, ¡ES UN CAMPO OBLIGATORIO!")) 
+            { bandera = false; }
+            if (false == ValidarComboBox(cbDiscapacidad, epDiscapacidad, "SELECCIONE DISCAPACIDAD, ¡ES UN CAMPO OBLIGATORIO!")) 
+            { bandera = false; }
+
+            if (false == ValidarComboBox(cbEstadoCivil, epEstadoCivil, "SELECCIONE ESTADO CIVIL, ¡ES UN CAMPO OBLIGATORIO!")) 
+            { bandera = false; }
 
             return bandera;
         }
@@ -453,6 +535,7 @@ namespace Ginmasio
             else
             {
                 errorProvider.Clear();
+                bandera = true;
             }
             return bandera;
         }
@@ -470,6 +553,103 @@ namespace Ginmasio
                 errorProvider.Clear();
             }
             return bandera;
+        }
+
+
+        //Funcion para validar eñ segundo TAB
+        void valida_segundo_tab(bool bandera)
+        { 
+            cbTipoBachillerato.Enabled = bandera;
+            cbDepartamento02.Enabled = bandera;
+            cbAnioFin.Enabled = bandera;
+            cbMunicipio02.Enabled = bandera;
+            cbCentroEstudios.Enabled = bandera;
+            txtMat4.Enabled = bandera;
+            txtMat5.Enabled = bandera;
+            txtLL4.Enabled = bandera;
+            txtLL5.Enabled = bandera;
+            txtGeo4.Enabled = bandera;
+            txtHistoria5.Enabled = bandera;
+            txtFis4.Enabled = bandera;
+            txtFisica5.Enabled = bandera;
+            txtQuimi4.Enabled = bandera;
+            txtQuimi5.Enabled = bandera;
+            btnLimpiar.Enabled = bandera;
+            btnValidar02.Enabled = bandera;
+            Frm_Mensaje_Advertencia mensaje = new Frm_Mensaje_Advertencia("la opción de datos educativos se ha habilitado");
+            mensaje.ShowDialog();
+
+        }
+
+        private void btnValidar02_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        void Calcular_Promedio() 
+        {
+            double mat04, mat05, lengua04, lengua05,geografia04,historia05,fisica04,fisica05,quimica04,quimica05,prom4,prom5,promt;
+            mat04 = Convert.ToDouble(txtMat4.Text);
+            mat05 = Convert.ToDouble(txtMat5.Text);
+            lengua04 = Convert.ToDouble(txtLL4.Text);
+            lengua05 = Convert.ToDouble(txtLL5.Text);
+            geografia04 = Convert.ToDouble(txtGeo4.Text);
+            historia05 = Convert.ToDouble(txtHistoria5.Text);
+            fisica04 = Convert.ToDouble(txtFis4.Text);
+            fisica05 = Convert.ToDouble(txtFisica5.Text);
+            quimica04 = Convert.ToDouble(txtQuimi4.Text);
+            quimica05 = Convert.ToDouble(txtQuimi5.Text);
+            prom4 = (mat04 + lengua04 + geografia04 + fisica04 + quimica04) / 5 ;
+            prom5 = (mat05 + lengua05 + historia05 + fisica05 + quimica05) / 5;
+            promt = (prom4 + prom5) / 2;
+            txtProm4.Text = Convert.ToString(prom4);
+            txtProm5.Text = Convert.ToString(prom5);
+            txtPromG.Text = Convert.ToString(promt);
+        }
+
+        private void cbDepartamento02_SelectedValueChanged(object sender, EventArgs e)
+        {
+            //se utiliza este evento para encontrar el departemanto seleccionado y asi obtener los municipios de dicho departamento
+            string departamento;
+            departamento = cbDepartamento02.Text;
+            cbMunicipio02.Items.Clear();
+
+            foreach (DataRow row in tbl_Departamento02.Rows)
+            {
+                if (Convert.ToString(row["Nombre"]) == departamento)
+                {
+                    tbl_Municipio02 = prematricula.Mostrar_Municipio(Convert.ToInt32(row["id"]));
+                }
+            }
+
+            cbMunicipio.Items.Clear();
+            foreach (DataRow row in tbl_Municipio02.Rows)
+            {
+                cbMunicipio02.Items.Add(Convert.ToString(row["Nombre"]));
+            }
+            //llenar el cb de Municipio
+        }
+
+        private void cbMunicipio02_SelectedValueChanged(object sender, EventArgs e)
+        {
+            string municipio;
+            municipio = cbMunicipio02.Text;
+            cbCentroEstudios.Items.Clear();
+
+            foreach (DataRow row in tbl_Municipio02.Rows)
+            {
+                if (Convert.ToString(row["Nombre"]) == municipio)
+                {
+                    tbl_Centro_Estudios = prematricula.Mostrar_Centro_Estudios(Convert.ToInt32(row["Id"]));
+                }
+            }
+
+            cbCentroEstudios.Items.Clear();
+            foreach (DataRow row in tbl_Centro_Estudios.Rows)
+            {
+                cbCentroEstudios.Items.Add(Convert.ToString(row["Nombre"]));
+            }
+            //llenar el cb de Municipio
         }
 
         //==================================FUNCIONES================================== ---->  FIN

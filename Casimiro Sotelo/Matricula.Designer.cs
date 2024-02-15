@@ -99,9 +99,9 @@
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.label34 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtProm5 = new System.Windows.Forms.TextBox();
+            this.txtPromG = new System.Windows.Forms.TextBox();
+            this.txtProm4 = new System.Windows.Forms.TextBox();
             this.label35 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
@@ -789,7 +789,8 @@
             // dtFecha
             // 
             this.dtFecha.Cursor = System.Windows.Forms.Cursors.Default;
-            this.dtFecha.CustomFormat = "dd/MM/yyyy";
+            this.dtFecha.CustomFormat = "";
+            this.dtFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtFecha.Location = new System.Drawing.Point(491, 23);
             this.dtFecha.MaxDate = new System.DateTime(2010, 12, 31, 0, 0, 0, 0);
             this.dtFecha.MinDate = new System.DateTime(1950, 1, 1, 0, 0, 0, 0);
@@ -1003,7 +1004,7 @@
             this.btnSiguiente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSiguiente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
-            this.btnSiguiente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSiguiente.Cursor = System.Windows.Forms.Cursors.No;
             this.btnSiguiente.Enabled = false;
             this.btnSiguiente.FlatAppearance.BorderSize = 0;
             this.btnSiguiente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(97)))), ((int)(((byte)(141)))));
@@ -1022,7 +1023,7 @@
             this.btnValidar02.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnValidar02.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
-            this.btnValidar02.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnValidar02.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnValidar02.Enabled = false;
             this.btnValidar02.FlatAppearance.BorderSize = 0;
             this.btnValidar02.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(97)))), ((int)(((byte)(141)))));
@@ -1035,6 +1036,7 @@
             this.btnValidar02.TabIndex = 79;
             this.btnValidar02.Text = "CONFIRMAR";
             this.btnValidar02.UseVisualStyleBackColor = false;
+            this.btnValidar02.Click += new System.EventHandler(this.btnValidar02_Click);
             // 
             // pnl03
             // 
@@ -1067,9 +1069,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox8.BackColor = System.Drawing.Color.LightGray;
             this.groupBox8.Controls.Add(this.label34);
-            this.groupBox8.Controls.Add(this.textBox2);
-            this.groupBox8.Controls.Add(this.textBox3);
-            this.groupBox8.Controls.Add(this.textBox1);
+            this.groupBox8.Controls.Add(this.txtProm5);
+            this.groupBox8.Controls.Add(this.txtPromG);
+            this.groupBox8.Controls.Add(this.txtProm4);
             this.groupBox8.Controls.Add(this.label35);
             this.groupBox8.Controls.Add(this.label36);
             this.groupBox8.Font = new System.Drawing.Font("Tahoma", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1090,35 +1092,38 @@
             this.label34.TabIndex = 79;
             this.label34.Text = "PROMEDIO DÉCIMO GRADO";
             // 
-            // textBox2
+            // txtProm5
             // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(210, 79);
-            this.textBox2.MaxLength = 3;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(74, 26);
-            this.textBox2.TabIndex = 82;
+            this.txtProm5.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtProm5.Enabled = false;
+            this.txtProm5.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProm5.Location = new System.Drawing.Point(210, 79);
+            this.txtProm5.MaxLength = 3;
+            this.txtProm5.Name = "txtProm5";
+            this.txtProm5.Size = new System.Drawing.Size(74, 26);
+            this.txtProm5.TabIndex = 82;
             // 
-            // textBox3
+            // txtPromG
             // 
-            this.textBox3.Enabled = false;
-            this.textBox3.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(210, 123);
-            this.textBox3.MaxLength = 3;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(74, 26);
-            this.textBox3.TabIndex = 84;
+            this.txtPromG.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtPromG.Enabled = false;
+            this.txtPromG.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPromG.Location = new System.Drawing.Point(210, 123);
+            this.txtPromG.MaxLength = 3;
+            this.txtPromG.Name = "txtPromG";
+            this.txtPromG.Size = new System.Drawing.Size(74, 26);
+            this.txtPromG.TabIndex = 84;
             // 
-            // textBox1
+            // txtProm4
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(210, 38);
-            this.textBox1.MaxLength = 3;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(74, 26);
-            this.textBox1.TabIndex = 80;
+            this.txtProm4.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtProm4.Enabled = false;
+            this.txtProm4.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProm4.Location = new System.Drawing.Point(210, 38);
+            this.txtProm4.MaxLength = 3;
+            this.txtProm4.Name = "txtProm4";
+            this.txtProm4.Size = new System.Drawing.Size(74, 26);
+            this.txtProm4.TabIndex = 80;
             // 
             // label35
             // 
@@ -1175,7 +1180,7 @@
             // 
             // txtMat4
             // 
-            this.txtMat4.Enabled = false;
+            this.txtMat4.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtMat4.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMat4.Location = new System.Drawing.Point(164, 34);
             this.txtMat4.MaxLength = 3;
@@ -1227,7 +1232,7 @@
             // 
             // txtLL4
             // 
-            this.txtLL4.Enabled = false;
+            this.txtLL4.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtLL4.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLL4.Location = new System.Drawing.Point(164, 74);
             this.txtLL4.MaxLength = 3;
@@ -1239,7 +1244,7 @@
             // 
             // txtGeo4
             // 
-            this.txtGeo4.Enabled = false;
+            this.txtGeo4.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtGeo4.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGeo4.Location = new System.Drawing.Point(164, 110);
             this.txtGeo4.MaxLength = 3;
@@ -1251,7 +1256,7 @@
             // 
             // txtFis4
             // 
-            this.txtFis4.Enabled = false;
+            this.txtFis4.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtFis4.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFis4.Location = new System.Drawing.Point(164, 148);
             this.txtFis4.MaxLength = 3;
@@ -1263,7 +1268,7 @@
             // 
             // txtQuimi4
             // 
-            this.txtQuimi4.Enabled = false;
+            this.txtQuimi4.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtQuimi4.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQuimi4.Location = new System.Drawing.Point(164, 183);
             this.txtQuimi4.MaxLength = 3;
@@ -1308,7 +1313,7 @@
             // 
             // txtMat5
             // 
-            this.txtMat5.Enabled = false;
+            this.txtMat5.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtMat5.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMat5.Location = new System.Drawing.Point(164, 34);
             this.txtMat5.MaxLength = 3;
@@ -1360,7 +1365,7 @@
             // 
             // txtLL5
             // 
-            this.txtLL5.Enabled = false;
+            this.txtLL5.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtLL5.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLL5.Location = new System.Drawing.Point(164, 74);
             this.txtLL5.MaxLength = 3;
@@ -1372,7 +1377,7 @@
             // 
             // txtHistoria5
             // 
-            this.txtHistoria5.Enabled = false;
+            this.txtHistoria5.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtHistoria5.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHistoria5.Location = new System.Drawing.Point(164, 110);
             this.txtHistoria5.MaxLength = 3;
@@ -1384,7 +1389,7 @@
             // 
             // txtFisica5
             // 
-            this.txtFisica5.Enabled = false;
+            this.txtFisica5.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtFisica5.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFisica5.Location = new System.Drawing.Point(164, 148);
             this.txtFisica5.MaxLength = 3;
@@ -1396,7 +1401,7 @@
             // 
             // txtQuimi5
             // 
-            this.txtQuimi5.Enabled = false;
+            this.txtQuimi5.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtQuimi5.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQuimi5.Location = new System.Drawing.Point(164, 183);
             this.txtQuimi5.MaxLength = 3;
@@ -1411,7 +1416,7 @@
             this.btnLimpiar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
-            this.btnLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLimpiar.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnLimpiar.Enabled = false;
             this.btnLimpiar.FlatAppearance.BorderSize = 0;
             this.btnLimpiar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(97)))), ((int)(((byte)(141)))));
@@ -1453,7 +1458,7 @@
             this.groupBox7.Controls.Add(this.cbAnioFin);
             this.groupBox7.Location = new System.Drawing.Point(19, 1);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(1209, 182);
+            this.groupBox7.Size = new System.Drawing.Size(1197, 182);
             this.groupBox7.TabIndex = 0;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "DATOS DE CENTRO DE ESTUDIO";
@@ -1462,15 +1467,14 @@
             // 
             this.cbCentroEstudios.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.cbCentroEstudios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
-            this.cbCentroEstudios.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbCentroEstudios.Cursor = System.Windows.Forms.Cursors.Default;
             this.cbCentroEstudios.DisplayMember = "dsfsdf";
             this.cbCentroEstudios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbCentroEstudios.Enabled = false;
             this.cbCentroEstudios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbCentroEstudios.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCentroEstudios.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.cbCentroEstudios.FormattingEnabled = true;
-            this.cbCentroEstudios.Location = new System.Drawing.Point(223, 136);
+            this.cbCentroEstudios.Location = new System.Drawing.Point(211, 136);
             this.cbCentroEstudios.Name = "cbCentroEstudios";
             this.cbCentroEstudios.Size = new System.Drawing.Size(457, 24);
             this.cbCentroEstudios.TabIndex = 56;
@@ -1480,7 +1484,7 @@
             this.label26.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(61, 32);
+            this.label26.Location = new System.Drawing.Point(49, 32);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(156, 16);
             this.label26.TabIndex = 52;
@@ -1490,17 +1494,16 @@
             // 
             this.cbTipoBachillerato.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.cbTipoBachillerato.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
-            this.cbTipoBachillerato.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbTipoBachillerato.Cursor = System.Windows.Forms.Cursors.Default;
             this.cbTipoBachillerato.DisplayMember = "dsfsdf";
             this.cbTipoBachillerato.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbTipoBachillerato.Enabled = false;
             this.cbTipoBachillerato.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbTipoBachillerato.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbTipoBachillerato.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.cbTipoBachillerato.FormattingEnabled = true;
-            this.cbTipoBachillerato.Location = new System.Drawing.Point(224, 29);
+            this.cbTipoBachillerato.Location = new System.Drawing.Point(212, 29);
             this.cbTipoBachillerato.Name = "cbTipoBachillerato";
-            this.cbTipoBachillerato.Size = new System.Drawing.Size(128, 24);
+            this.cbTipoBachillerato.Size = new System.Drawing.Size(302, 24);
             this.cbTipoBachillerato.TabIndex = 51;
             // 
             // label25
@@ -1508,7 +1511,7 @@
             this.label25.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(61, 139);
+            this.label25.Location = new System.Drawing.Point(49, 139);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(140, 16);
             this.label25.TabIndex = 55;
@@ -1518,42 +1521,42 @@
             // 
             this.cbMunicipio02.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.cbMunicipio02.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
-            this.cbMunicipio02.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbMunicipio02.Cursor = System.Windows.Forms.Cursors.Default;
             this.cbMunicipio02.DisplayMember = "dsfsdf";
             this.cbMunicipio02.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbMunicipio02.Enabled = false;
             this.cbMunicipio02.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbMunicipio02.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbMunicipio02.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.cbMunicipio02.FormattingEnabled = true;
-            this.cbMunicipio02.Location = new System.Drawing.Point(499, 76);
+            this.cbMunicipio02.Location = new System.Drawing.Point(658, 74);
             this.cbMunicipio02.Name = "cbMunicipio02";
-            this.cbMunicipio02.Size = new System.Drawing.Size(181, 24);
+            this.cbMunicipio02.Size = new System.Drawing.Size(207, 24);
             this.cbMunicipio02.TabIndex = 54;
+            this.cbMunicipio02.SelectedValueChanged += new System.EventHandler(this.cbMunicipio02_SelectedValueChanged);
             // 
             // cbDepartamento02
             // 
             this.cbDepartamento02.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.cbDepartamento02.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
-            this.cbDepartamento02.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbDepartamento02.Cursor = System.Windows.Forms.Cursors.Default;
             this.cbDepartamento02.DisplayMember = "dsfsdf";
             this.cbDepartamento02.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbDepartamento02.Enabled = false;
             this.cbDepartamento02.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbDepartamento02.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbDepartamento02.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.cbDepartamento02.FormattingEnabled = true;
-            this.cbDepartamento02.Location = new System.Drawing.Point(499, 26);
+            this.cbDepartamento02.Location = new System.Drawing.Point(658, 24);
             this.cbDepartamento02.Name = "cbDepartamento02";
-            this.cbDepartamento02.Size = new System.Drawing.Size(181, 24);
+            this.cbDepartamento02.Size = new System.Drawing.Size(207, 24);
             this.cbDepartamento02.TabIndex = 53;
+            this.cbDepartamento02.SelectedValueChanged += new System.EventHandler(this.cbDepartamento02_SelectedValueChanged);
             // 
             // label17
             // 
             this.label17.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(383, 29);
+            this.label17.Location = new System.Drawing.Point(542, 27);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(109, 16);
             this.label17.TabIndex = 51;
@@ -1564,7 +1567,7 @@
             this.label18.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(402, 82);
+            this.label18.Location = new System.Drawing.Point(561, 80);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(74, 16);
             this.label18.TabIndex = 52;
@@ -1575,7 +1578,7 @@
             this.label15.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(61, 79);
+            this.label15.Location = new System.Drawing.Point(49, 79);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(146, 16);
             this.label15.TabIndex = 50;
@@ -1585,22 +1588,22 @@
             // 
             this.cbAnioFin.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.cbAnioFin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
-            this.cbAnioFin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbAnioFin.Cursor = System.Windows.Forms.Cursors.Default;
             this.cbAnioFin.DisplayMember = "dsfsdf";
             this.cbAnioFin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbAnioFin.Enabled = false;
             this.cbAnioFin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbAnioFin.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbAnioFin.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.cbAnioFin.FormattingEnabled = true;
-            this.cbAnioFin.Location = new System.Drawing.Point(224, 76);
+            this.cbAnioFin.Location = new System.Drawing.Point(212, 76);
             this.cbAnioFin.Name = "cbAnioFin";
-            this.cbAnioFin.Size = new System.Drawing.Size(128, 24);
+            this.cbAnioFin.Size = new System.Drawing.Size(302, 24);
             this.cbAnioFin.TabIndex = 49;
             // 
             // pnlTitulo
             // 
             this.pnlTitulo.Controls.Add(this.label28);
+            this.pnlTitulo.Cursor = System.Windows.Forms.Cursors.Default;
             this.pnlTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTitulo.Location = new System.Drawing.Point(0, 0);
             this.pnlTitulo.Name = "pnlTitulo";
@@ -2026,11 +2029,11 @@
         private System.Windows.Forms.TextBox txtQuimi4;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtPromG;
         private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtProm5;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtProm4;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.GroupBox groupBox11;
         private System.Windows.Forms.GroupBox groupBox8;

@@ -55,26 +55,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa Negocio.dll" size="15872">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa Negocio.dll" size="16384">
       <assemblyIdentity name="Capa Negocio" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>2HiZAyDEnWT5c5wRolgJ61wjopM5WP4bF0/sO0CaNe0=</dsig:DigestValue>
+        <dsig:DigestValue>bTcq8x9Y3q2MsEb0YZxL7wODkQDgwfefQDae3asENdw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="UNCSM.exe" size="2477056">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="UNCSM.exe" size="2480640">
       <assemblyIdentity name="UNCSM" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>YBx4WzNoW4euDenswCyoRB7ukX/9+joIvcHkNS/q/jw=</dsig:DigestValue>
+        <dsig:DigestValue>+oKTnCw8EEi2bDF+B1TMw+HptXS0nMDgF3uHe9CpPZI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

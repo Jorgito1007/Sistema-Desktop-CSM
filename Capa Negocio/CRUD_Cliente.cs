@@ -126,8 +126,33 @@ namespace Capa_Negocio
             return Tabla; // retorno de la tabla 
         }
 
+        public DataTable Mostrar_Tipo_Bachillerato()
+        {
+            DataTable Tabla = new DataTable(); //Instancia de un ojeto de tipo DataTable para recibir la tabla que devuelde el objeto SqlDataAdapter
+            conexion.conexion_datos.Open(); //se abre la conexion para el comando
+            Comando = new SqlCommand(); //instancia del objeto de tipo sqlcommando
+            Comando.CommandText = "SP_BACHILLERATO"; //se pasa el procedimiento almancenado
+            Comando.Connection = conexion.conexion_datos; // se abre la conexion para el comando
+            Adaptador = new SqlDataAdapter(Comando); //se reciebe la tabla producto de la ejecucion del procedimiento
+            Adaptador.Fill(Tabla); // con el SqlDataAdapter se llena la tabla
+            conexion.conexion_datos.Close(); // se cierra la conexion
+            return Tabla; // retorno de la tabla 
+        }
 
-
+        public DataTable Mostrar_Centro_Estudios(int ID_Municipio)
+        {
+            DataTable Tabla = new DataTable(); //Instancia de un ojeto de tipo DataTable para recibir la tabla que devuelde el objeto SqlDataAdapter
+            conexion.conexion_datos.Open(); //se abre la conexion para el comando
+            Comando = new SqlCommand(); //instancia del objeto de tipo sqlcommando
+            Comando.CommandText = "SP_MOSTRAR_CENTRO"; //se pasa el procedimiento almancenado
+            Comando.CommandType = System.Data.CommandType.StoredProcedure;
+            Comando.Parameters.Add(new SqlParameter("@ID_MUNICIPO", System.Data.SqlDbType.Int)).Value = ID_Municipio;
+            Comando.Connection = conexion.conexion_datos; // se abre la conexion para el comando
+            Adaptador = new SqlDataAdapter(Comando); //se reciebe la tabla producto de la ejecucion del procedimiento
+            Adaptador.Fill(Tabla); // con el SqlDataAdapter se llena la tabla
+            conexion.conexion_datos.Close(); // se cierra la conexion
+            return Tabla; // retorno de la tabla 
+        }
 
 
 
