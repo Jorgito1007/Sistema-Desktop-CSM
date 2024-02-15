@@ -1023,6 +1023,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnValidar02.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
             this.btnValidar02.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnValidar02.Enabled = false;
             this.btnValidar02.FlatAppearance.BorderSize = 0;
             this.btnValidar02.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(97)))), ((int)(((byte)(141)))));
             this.btnValidar02.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1091,6 +1092,7 @@
             // 
             // textBox2
             // 
+            this.textBox2.Enabled = false;
             this.textBox2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(210, 79);
             this.textBox2.MaxLength = 3;
@@ -1100,6 +1102,7 @@
             // 
             // textBox3
             // 
+            this.textBox3.Enabled = false;
             this.textBox3.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.Location = new System.Drawing.Point(210, 123);
             this.textBox3.MaxLength = 3;
@@ -1109,6 +1112,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.Enabled = false;
             this.textBox1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(210, 38);
             this.textBox1.MaxLength = 3;
@@ -1171,6 +1175,7 @@
             // 
             // txtMat4
             // 
+            this.txtMat4.Enabled = false;
             this.txtMat4.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMat4.Location = new System.Drawing.Point(164, 34);
             this.txtMat4.MaxLength = 3;
@@ -1222,6 +1227,7 @@
             // 
             // txtLL4
             // 
+            this.txtLL4.Enabled = false;
             this.txtLL4.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLL4.Location = new System.Drawing.Point(164, 74);
             this.txtLL4.MaxLength = 3;
@@ -1233,6 +1239,7 @@
             // 
             // txtGeo4
             // 
+            this.txtGeo4.Enabled = false;
             this.txtGeo4.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGeo4.Location = new System.Drawing.Point(164, 110);
             this.txtGeo4.MaxLength = 3;
@@ -1244,6 +1251,7 @@
             // 
             // txtFis4
             // 
+            this.txtFis4.Enabled = false;
             this.txtFis4.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFis4.Location = new System.Drawing.Point(164, 148);
             this.txtFis4.MaxLength = 3;
@@ -1255,6 +1263,7 @@
             // 
             // txtQuimi4
             // 
+            this.txtQuimi4.Enabled = false;
             this.txtQuimi4.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQuimi4.Location = new System.Drawing.Point(164, 183);
             this.txtQuimi4.MaxLength = 3;
@@ -1299,6 +1308,7 @@
             // 
             // txtMat5
             // 
+            this.txtMat5.Enabled = false;
             this.txtMat5.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMat5.Location = new System.Drawing.Point(164, 34);
             this.txtMat5.MaxLength = 3;
@@ -1350,6 +1360,7 @@
             // 
             // txtLL5
             // 
+            this.txtLL5.Enabled = false;
             this.txtLL5.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLL5.Location = new System.Drawing.Point(164, 74);
             this.txtLL5.MaxLength = 3;
@@ -1361,6 +1372,7 @@
             // 
             // txtHistoria5
             // 
+            this.txtHistoria5.Enabled = false;
             this.txtHistoria5.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHistoria5.Location = new System.Drawing.Point(164, 110);
             this.txtHistoria5.MaxLength = 3;
@@ -1372,6 +1384,7 @@
             // 
             // txtFisica5
             // 
+            this.txtFisica5.Enabled = false;
             this.txtFisica5.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFisica5.Location = new System.Drawing.Point(164, 148);
             this.txtFisica5.MaxLength = 3;
@@ -1383,6 +1396,7 @@
             // 
             // txtQuimi5
             // 
+            this.txtQuimi5.Enabled = false;
             this.txtQuimi5.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQuimi5.Location = new System.Drawing.Point(164, 183);
             this.txtQuimi5.MaxLength = 3;
@@ -1398,6 +1412,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
             this.btnLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLimpiar.Enabled = false;
             this.btnLimpiar.FlatAppearance.BorderSize = 0;
             this.btnLimpiar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(97)))), ((int)(((byte)(141)))));
             this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1450,6 +1465,7 @@
             this.cbCentroEstudios.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbCentroEstudios.DisplayMember = "dsfsdf";
             this.cbCentroEstudios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCentroEstudios.Enabled = false;
             this.cbCentroEstudios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbCentroEstudios.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCentroEstudios.ForeColor = System.Drawing.SystemColors.HighlightText;
@@ -1477,6 +1493,7 @@
             this.cbTipoBachillerato.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbTipoBachillerato.DisplayMember = "dsfsdf";
             this.cbTipoBachillerato.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTipoBachillerato.Enabled = false;
             this.cbTipoBachillerato.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbTipoBachillerato.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbTipoBachillerato.ForeColor = System.Drawing.SystemColors.HighlightText;
@@ -1504,6 +1521,7 @@
             this.cbMunicipio02.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbMunicipio02.DisplayMember = "dsfsdf";
             this.cbMunicipio02.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbMunicipio02.Enabled = false;
             this.cbMunicipio02.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbMunicipio02.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbMunicipio02.ForeColor = System.Drawing.SystemColors.HighlightText;
@@ -1520,6 +1538,7 @@
             this.cbDepartamento02.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbDepartamento02.DisplayMember = "dsfsdf";
             this.cbDepartamento02.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbDepartamento02.Enabled = false;
             this.cbDepartamento02.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbDepartamento02.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbDepartamento02.ForeColor = System.Drawing.SystemColors.HighlightText;
@@ -1569,6 +1588,7 @@
             this.cbAnioFin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbAnioFin.DisplayMember = "dsfsdf";
             this.cbAnioFin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbAnioFin.Enabled = false;
             this.cbAnioFin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbAnioFin.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbAnioFin.ForeColor = System.Drawing.SystemColors.HighlightText;
@@ -1643,6 +1663,7 @@
             this.btnMaatricular.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMaatricular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
             this.btnMaatricular.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMaatricular.Enabled = false;
             this.btnMaatricular.FlatAppearance.BorderSize = 0;
             this.btnMaatricular.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(97)))), ((int)(((byte)(141)))));
             this.btnMaatricular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1660,6 +1681,7 @@
             this.btnValidar03.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnValidar03.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
             this.btnValidar03.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnValidar03.Enabled = false;
             this.btnValidar03.FlatAppearance.BorderSize = 0;
             this.btnValidar03.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(97)))), ((int)(((byte)(141)))));
             this.btnValidar03.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1695,6 +1717,7 @@
             this.cbAreaConocimiento.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbAreaConocimiento.DisplayMember = "dsfsdf";
             this.cbAreaConocimiento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbAreaConocimiento.Enabled = false;
             this.cbAreaConocimiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbAreaConocimiento.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbAreaConocimiento.ForeColor = System.Drawing.SystemColors.HighlightText;
@@ -1722,6 +1745,7 @@
             this.cbCarrera.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbCarrera.DisplayMember = "dsfsdf";
             this.cbCarrera.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCarrera.Enabled = false;
             this.cbCarrera.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbCarrera.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCarrera.ForeColor = System.Drawing.SystemColors.HighlightText;
@@ -1749,6 +1773,7 @@
             this.cbTurno.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbTurno.DisplayMember = "dsfsdf";
             this.cbTurno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTurno.Enabled = false;
             this.cbTurno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbTurno.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbTurno.ForeColor = System.Drawing.SystemColors.HighlightText;
