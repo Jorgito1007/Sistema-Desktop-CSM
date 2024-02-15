@@ -288,7 +288,7 @@
             this.btnValidar01.Location = new System.Drawing.Point(914, 5);
             this.btnValidar01.Name = "btnValidar01";
             this.btnValidar01.Size = new System.Drawing.Size(124, 33);
-            this.btnValidar01.TabIndex = 46;
+            this.btnValidar01.TabIndex = 26;
             this.btnValidar01.Text = "VALIDAR";
             this.btnValidar01.UseVisualStyleBackColor = false;
             this.btnValidar01.Click += new System.EventHandler(this.btnValidar01_Click);
@@ -298,6 +298,7 @@
             this.btnSiguiente01.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSiguiente01.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
             this.btnSiguiente01.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSiguiente01.Enabled = false;
             this.btnSiguiente01.FlatAppearance.BorderSize = 0;
             this.btnSiguiente01.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(97)))), ((int)(((byte)(141)))));
             this.btnSiguiente01.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -309,6 +310,7 @@
             this.btnSiguiente01.TabIndex = 45;
             this.btnSiguiente01.Text = "SIGUIENTE";
             this.btnSiguiente01.UseVisualStyleBackColor = false;
+            this.btnSiguiente01.Click += new System.EventHandler(this.btnSiguiente01_Click);
             // 
             // groupBox5
             // 
@@ -347,7 +349,7 @@
             this.cbDiscapacidad.Location = new System.Drawing.Point(452, 33);
             this.cbDiscapacidad.Name = "cbDiscapacidad";
             this.cbDiscapacidad.Size = new System.Drawing.Size(451, 24);
-            this.cbDiscapacidad.TabIndex = 52;
+            this.cbDiscapacidad.TabIndex = 25;
             // 
             // label22
             // 
@@ -372,7 +374,7 @@
             this.cbMano.Location = new System.Drawing.Point(147, 33);
             this.cbMano.Name = "cbMano";
             this.cbMano.Size = new System.Drawing.Size(152, 24);
-            this.cbMano.TabIndex = 50;
+            this.cbMano.TabIndex = 24;
             // 
             // groupBox1
             // 
@@ -423,7 +425,7 @@
             this.cbTipoConexion.Location = new System.Drawing.Point(533, 109);
             this.cbTipoConexion.Name = "cbTipoConexion";
             this.cbTipoConexion.Size = new System.Drawing.Size(197, 24);
-            this.cbTipoConexion.TabIndex = 55;
+            this.cbTipoConexion.TabIndex = 20;
             // 
             // groupBox4
             // 
@@ -444,7 +446,7 @@
             this.chkTableta.Location = new System.Drawing.Point(17, 105);
             this.chkTableta.Name = "chkTableta";
             this.chkTableta.Size = new System.Drawing.Size(82, 20);
-            this.chkTableta.TabIndex = 53;
+            this.chkTableta.TabIndex = 23;
             this.chkTableta.Text = "TABLETA";
             this.chkTableta.UseVisualStyleBackColor = true;
             // 
@@ -454,7 +456,7 @@
             this.chkCompu.Location = new System.Drawing.Point(17, 37);
             this.chkCompu.Name = "chkCompu";
             this.chkCompu.Size = new System.Drawing.Size(124, 20);
-            this.chkCompu.TabIndex = 51;
+            this.chkCompu.TabIndex = 21;
             this.chkCompu.Text = "COMPUTADORA";
             this.chkCompu.UseVisualStyleBackColor = true;
             // 
@@ -464,7 +466,7 @@
             this.chkCelular.Location = new System.Drawing.Point(17, 69);
             this.chkCelular.Name = "chkCelular";
             this.chkCelular.Size = new System.Drawing.Size(82, 20);
-            this.chkCelular.TabIndex = 52;
+            this.chkCelular.TabIndex = 22;
             this.chkCelular.Text = "CELULAR";
             this.chkCelular.UseVisualStyleBackColor = true;
             // 
@@ -491,7 +493,7 @@
             this.cbProveedor.Location = new System.Drawing.Point(578, 74);
             this.cbProveedor.Name = "cbProveedor";
             this.cbProveedor.Size = new System.Drawing.Size(152, 24);
-            this.cbProveedor.TabIndex = 48;
+            this.cbProveedor.TabIndex = 19;
             // 
             // label19
             // 
@@ -516,7 +518,7 @@
             this.cbAccesoInternet.Location = new System.Drawing.Point(628, 35);
             this.cbAccesoInternet.Name = "cbAccesoInternet";
             this.cbAccesoInternet.Size = new System.Drawing.Size(102, 24);
-            this.cbAccesoInternet.TabIndex = 46;
+            this.cbAccesoInternet.TabIndex = 18;
             this.cbAccesoInternet.SelectedValueChanged += new System.EventHandler(this.cbAccesoInternet_SelectedValueChanged);
             // 
             // txtTigo
@@ -525,10 +527,12 @@
             this.txtTigo.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTigo.ForeColor = System.Drawing.SystemColors.MenuText;
             this.txtTigo.Location = new System.Drawing.Point(173, 71);
+            this.txtTigo.MaxLength = 8;
             this.txtTigo.Name = "txtTigo";
             this.txtTigo.Size = new System.Drawing.Size(156, 23);
-            this.txtTigo.TabIndex = 45;
+            this.txtTigo.TabIndex = 15;
             this.txtTigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTigo_KeyPress);
             // 
             // label12
             // 
@@ -546,10 +550,12 @@
             this.txtClaro.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtClaro.ForeColor = System.Drawing.SystemColors.MenuText;
             this.txtClaro.Location = new System.Drawing.Point(173, 36);
+            this.txtClaro.MaxLength = 8;
             this.txtClaro.Name = "txtClaro";
             this.txtClaro.Size = new System.Drawing.Size(156, 23);
-            this.txtClaro.TabIndex = 43;
+            this.txtClaro.TabIndex = 14;
             this.txtClaro.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtClaro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtClaro_KeyPress);
             // 
             // label14
             // 
@@ -569,7 +575,7 @@
             this.txtCorreoElectronico.Location = new System.Drawing.Point(173, 139);
             this.txtCorreoElectronico.Name = "txtCorreoElectronico";
             this.txtCorreoElectronico.Size = new System.Drawing.Size(156, 23);
-            this.txtCorreoElectronico.TabIndex = 41;
+            this.txtCorreoElectronico.TabIndex = 17;
             this.txtCorreoElectronico.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label11
@@ -588,10 +594,12 @@
             this.txtConvencional.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConvencional.ForeColor = System.Drawing.SystemColors.MenuText;
             this.txtConvencional.Location = new System.Drawing.Point(173, 105);
+            this.txtConvencional.MaxLength = 8;
             this.txtConvencional.Name = "txtConvencional";
             this.txtConvencional.Size = new System.Drawing.Size(156, 23);
-            this.txtConvencional.TabIndex = 39;
+            this.txtConvencional.TabIndex = 16;
             this.txtConvencional.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtConvencional.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtConvencional_KeyPress);
             // 
             // label13
             // 
@@ -637,7 +645,7 @@
             this.cbMunicipio.Location = new System.Drawing.Point(446, 37);
             this.cbMunicipio.Name = "cbMunicipio";
             this.cbMunicipio.Size = new System.Drawing.Size(193, 24);
-            this.cbMunicipio.TabIndex = 43;
+            this.cbMunicipio.TabIndex = 10;
             // 
             // cbDepartamento
             // 
@@ -652,7 +660,7 @@
             this.cbDepartamento.Location = new System.Drawing.Point(147, 37);
             this.cbDepartamento.Name = "cbDepartamento";
             this.cbDepartamento.Size = new System.Drawing.Size(149, 24);
-            this.cbDepartamento.TabIndex = 42;
+            this.cbDepartamento.TabIndex = 9;
             this.cbDepartamento.SelectedValueChanged += new System.EventHandler(this.cbDepartamento_SelectedValueChanged);
             // 
             // label10
@@ -673,7 +681,7 @@
             this.txtBarrio.Location = new System.Drawing.Point(147, 77);
             this.txtBarrio.Name = "txtBarrio";
             this.txtBarrio.Size = new System.Drawing.Size(148, 23);
-            this.txtBarrio.TabIndex = 38;
+            this.txtBarrio.TabIndex = 11;
             this.txtBarrio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lbcasa
@@ -704,7 +712,7 @@
             this.txtCasa.Location = new System.Drawing.Point(446, 77);
             this.txtCasa.Name = "txtCasa";
             this.txtCasa.Size = new System.Drawing.Size(172, 23);
-            this.txtCasa.TabIndex = 34;
+            this.txtCasa.TabIndex = 12;
             this.txtCasa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lbDireccion
@@ -726,7 +734,7 @@
             this.txtDireccion.Multiline = true;
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(222, 66);
-            this.txtDireccion.TabIndex = 29;
+            this.txtDireccion.TabIndex = 13;
             this.txtDireccion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtMunicipio
@@ -780,11 +788,15 @@
             // 
             // dtFecha
             // 
+            this.dtFecha.Cursor = System.Windows.Forms.Cursors.Default;
+            this.dtFecha.CustomFormat = "dd/MM/yyyy";
             this.dtFecha.Location = new System.Drawing.Point(491, 23);
+            this.dtFecha.MaxDate = new System.DateTime(2010, 12, 31, 0, 0, 0, 0);
+            this.dtFecha.MinDate = new System.DateTime(1950, 1, 1, 0, 0, 0, 0);
             this.dtFecha.Name = "dtFecha";
             this.dtFecha.Size = new System.Drawing.Size(148, 23);
-            this.dtFecha.TabIndex = 50;
-            this.dtFecha.Value = new System.DateTime(2024, 2, 12, 0, 0, 0, 0);
+            this.dtFecha.TabIndex = 5;
+            this.dtFecha.Value = new System.DateTime(2010, 12, 31, 0, 0, 0, 0);
             // 
             // label9
             // 
@@ -819,7 +831,7 @@
             this.cbEtnia.Location = new System.Drawing.Point(784, 25);
             this.cbEtnia.Name = "cbEtnia";
             this.cbEtnia.Size = new System.Drawing.Size(152, 24);
-            this.cbEtnia.TabIndex = 47;
+            this.cbEtnia.TabIndex = 6;
             // 
             // label7
             // 
@@ -844,7 +856,7 @@
             this.cbEstadoCivil.Location = new System.Drawing.Point(784, 106);
             this.cbEstadoCivil.Name = "cbEstadoCivil";
             this.cbEstadoCivil.Size = new System.Drawing.Size(152, 24);
-            this.cbEstadoCivil.TabIndex = 43;
+            this.cbEstadoCivil.TabIndex = 8;
             // 
             // label6
             // 
@@ -869,7 +881,7 @@
             this.cbSexo.Location = new System.Drawing.Point(784, 64);
             this.cbSexo.Name = "cbSexo";
             this.cbSexo.Size = new System.Drawing.Size(152, 24);
-            this.cbSexo.TabIndex = 41;
+            this.cbSexo.TabIndex = 7;
             // 
             // label4
             // 
@@ -883,10 +895,11 @@
             // 
             // txtSegundoApellido
             // 
+            this.txtSegundoApellido.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSegundoApellido.Location = new System.Drawing.Point(490, 106);
             this.txtSegundoApellido.Name = "txtSegundoApellido";
             this.txtSegundoApellido.Size = new System.Drawing.Size(149, 23);
-            this.txtSegundoApellido.TabIndex = 39;
+            this.txtSegundoApellido.TabIndex = 4;
             // 
             // label5
             // 
@@ -900,10 +913,11 @@
             // 
             // txtPrimerApellido
             // 
+            this.txtPrimerApellido.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPrimerApellido.Location = new System.Drawing.Point(149, 98);
             this.txtPrimerApellido.Name = "txtPrimerApellido";
             this.txtPrimerApellido.Size = new System.Drawing.Size(149, 23);
-            this.txtPrimerApellido.TabIndex = 37;
+            this.txtPrimerApellido.TabIndex = 3;
             // 
             // label3
             // 
@@ -917,10 +931,11 @@
             // 
             // txtSegundoNombre
             // 
+            this.txtSegundoNombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSegundoNombre.Location = new System.Drawing.Point(491, 67);
             this.txtSegundoNombre.Name = "txtSegundoNombre";
             this.txtSegundoNombre.Size = new System.Drawing.Size(149, 23);
-            this.txtSegundoNombre.TabIndex = 35;
+            this.txtSegundoNombre.TabIndex = 2;
             // 
             // label2
             // 
@@ -944,6 +959,7 @@
             // 
             // txtPrimerNombre
             // 
+            this.txtPrimerNombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPrimerNombre.Location = new System.Drawing.Point(149, 63);
             this.txtPrimerNombre.Name = "txtPrimerNombre";
             this.txtPrimerNombre.Size = new System.Drawing.Size(149, 23);
@@ -951,10 +967,12 @@
             // 
             // txtCedula
             // 
+            this.txtCedula.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCedula.Location = new System.Drawing.Point(150, 25);
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.Size = new System.Drawing.Size(148, 23);
             this.txtCedula.TabIndex = 0;
+            this.txtCedula.Leave += new System.EventHandler(this.txtCedula_Leave);
             // 
             // TabNotas
             // 
@@ -986,6 +1004,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSiguiente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
             this.btnSiguiente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSiguiente.Enabled = false;
             this.btnSiguiente.FlatAppearance.BorderSize = 0;
             this.btnSiguiente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(97)))), ((int)(((byte)(141)))));
             this.btnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

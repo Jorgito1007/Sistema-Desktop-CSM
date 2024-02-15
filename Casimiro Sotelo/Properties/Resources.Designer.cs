@@ -123,6 +123,16 @@ namespace UNCSM.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap app_attention_22046 {
+            get {
+                object obj = ResourceManager.GetObject("app_attention_22046", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap barra_de_busqueda {
             get {
                 object obj = ResourceManager.GetObject("barra-de-busqueda", resourceCulture);

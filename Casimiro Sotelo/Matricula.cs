@@ -4,10 +4,14 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Navigation;
 using Capa_Negocio;
+using UNCSM;
 
 namespace Ginmasio
 {
@@ -18,6 +22,7 @@ namespace Ginmasio
         DataTable tbl_Municipio = new DataTable();  //DataTable para almacenar los municipios en base al ID de cada Departamento
         DataTable Table = new DataTable();
         DataTable tbl_Discapacidad = new DataTable();
+        Frm_Mensaje_Advertencia mensaje;
         public Matricula()
         {
             InitializeComponent();
@@ -28,6 +33,10 @@ namespace Ginmasio
             llenar_mano();
             llenarAccesoInternet();
             llenarDiscapacidad();
+
+            txtCedula.TextChanged += ConvertirAMayusculas;
+            txtPrimerNombre.TextChanged += ConvertirAMayusculas;
+            txtPrimerApellido.TextChanged += ConvertirAMayusculas;
         }
 
 
@@ -128,11 +137,11 @@ namespace Ginmasio
 
         private void txtMat4_Leave(object sender, EventArgs e)
         {
-                if (Valida_Nota(txtMat4.Text) == false)
-                {
-                    txtMat4.Clear();
-                    txtMat4.Focus();
-                }
+            if (Valida_Nota(txtMat4.Text) == false)
+            {
+                txtMat4.Clear();
+                txtMat4.Focus();
+            }
         }
 
         private void txtLL4_Leave(object sender, EventArgs e)
@@ -216,7 +225,7 @@ namespace Ginmasio
             }
         }
 
- 
+
 
 
         private void cbDepartamento_SelectedValueChanged(object sender, EventArgs e)
@@ -227,10 +236,10 @@ namespace Ginmasio
 
             foreach (DataRow row in tbl_Departamento.Rows)
             {
-                if  (Convert.ToString(row["Nombre"]) == departamento)
+                if (Convert.ToString(row["Nombre"]) == departamento)
                 {
                     tbl_Municipio = prematricula.Mostrar_Municipio(Convert.ToInt32(row["id"]));
-                }     
+                }
             }
 
             cbMunicipio.Items.Clear();
@@ -253,13 +262,13 @@ namespace Ginmasio
 
         void llenarAccesoInternet()
         {
-            DataTable dtProveedor = new DataTable(); 
+            DataTable dtProveedor = new DataTable();
             cbAccesoInternet.Items.Add("SI");
             cbAccesoInternet.Items.Add("NO");
             dtProveedor = prematricula.Mostrar_Proveedor_Internet();
             foreach (DataRow row in dtProveedor.Rows)
             {
-                cbProveedor.Items.Add( Convert.ToString(row["ProveedorIntenet"]).ToUpper());
+                cbProveedor.Items.Add(Convert.ToString(row["ProveedorIntenet"]).ToUpper());
             }
 
         }
@@ -271,7 +280,7 @@ namespace Ginmasio
 
             cbTipoConexion.Items.Add("INTERNET MOVIL");
             cbTipoConexion.Items.Add("INTERNET RESINDENCIAL");
-          
+
         }
         void llenar_Departamento()
         {
@@ -315,7 +324,7 @@ namespace Ginmasio
 
         private void cbAccesoInternet_SelectedValueChanged(object sender, EventArgs e)
         {
-          if(  cbAccesoInternet.Text == "NO")
+            if (cbAccesoInternet.Text == "NO")
             {
 
                 cbProveedor.Enabled = false;
@@ -327,7 +336,7 @@ namespace Ginmasio
                 cbProveedor.SelectedIndex = -1;
                 cbTipoConexion.SelectedIndex = -1;
             }
-          else
+            else
             {
                 cbProveedor.Enabled = true;
                 cbTipoConexion.Enabled = true;
@@ -337,124 +346,128 @@ namespace Ginmasio
             }
         }
 
+
+
+       public bool ValidarCamposTab01()
+        {
+            bool bandera = true;
+
+            // Llamadas a las funciones para validar cada campo
+            bandera =  ValidarCampo(txtCedula, epCedula, "INGRESE CÉDULA, ¡ES UN CAMPO OBLIGATORIO!");
+            bandera = ValidarCampo(txtPrimerNombre, epCedula, "INGRESE PRIMER NOMBRE, ¡ES UN CAMPO OBLIGATORIO!");
+            bandera = ValidarCampo(txtPrimerApellido, epPrimerApellido, "INGRESE PRIMER APELLIDO, ¡ES UN CAMPO OBLIGATORIO!");
+            bandera = ValidarComboBox(cbEtnia, epEtnia, "SELECCIONE ETNIA, ¡ES UN CAMPO OBLIGATORIO!");
+            bandera = ValidarComboBox(cbSexo, epSexo, "SELECCIONE SEXO, ¡ES UN CAMPO OBLIGATORIO!");
+            bandera = ValidarComboBox(cbDepartamento, epDepartamento, "SELECCIONE DEPARTAMENTO, ¡ES UN CAMPO OBLIGATORIO!");
+            bandera = ValidarComboBox(cbMunicipio, epMunicipio, "SELECCIONE MUNICIPIO, ¡ES UN CAMPO OBLIGATORIO!");
+            bandera = ValidarCampo(txtDireccion, epDireccion, "INGRESE DIRECCION, ¡ES UN CAMPO OBLIGATORIO!");
+            bandera = ValidarCampo(txtBarrio, epBarrio, "INGRESE BARRIO O COMARCA, ¡ES UN CAMPO OBLIGATORIO!");
+            bandera = ValidarComboBox(cbAccesoInternet, epAccesoInternet, "SELECCIONE OPCION, ¡ES UN CAMPO OBLIGATORIO!");
+            bandera = ValidarComboBox(cbMano, epZurdoDiestro, "SELECCIONE OPCION, ¡ES UN CAMPO OBLIGATORIO!");
+            bandera = ValidarComboBox(cbDiscapacidad, epDiscapacidad, "SELECCIONE DISCAPACIDAD, ¡ES UN CAMPO OBLIGATORIO!");
+            bandera = ValidarComboBox(cbEstadoCivil, epEstadoCivil, "SELECCIONE ESTADO CIVIL, ¡ES UN CAMPO OBLIGATORIO!");
+
+            return bandera;
+        }
+
         private void btnValidar01_Click(object sender, EventArgs e)
         {
-            if (txtCedula.Text == string.Empty)
+          if  (ValidarCamposTab01() == true)
             {
-                epCedula.SetError(txtCedula, "INGRESE CÉDULA, ¡ES UN CAMPO OBLIGATORIO!");
+                btnSiguiente01.Enabled = true;
             }
             else
             {
-                epCedula.Clear();   
+                Frm_Mensaje_Advertencia mensaje =  new Frm_Mensaje_Advertencia("¡CAMPOS INCOMPLETOS!");
+                mensaje.ShowDialog();
             }
+        }
 
-            if(txtPrimerNombre.Text == string.Empty)
+
+
+        bool ValidarCampo(TextBoxBase control, ErrorProvider errorProvider, string mensajeError)
+        {
+            bool bandera = true; 
+            if (control.Text == string.Empty)
             {
-                epCedula.SetError(txtPrimerNombre, "INGRESE PRIMER NOMBRE, ¡ES UN CAMPO OBLIGATORIO!");
+                errorProvider.SetError(control, mensajeError);
+                bandera = false;
             }
             else
             {
-                epCedula.Clear();
+                errorProvider.Clear();
             }
+            return bandera;
+        }
 
-            if (txtPrimerApellido.Text == string.Empty)
+        bool ValidarComboBox(ComboBox control, ErrorProvider errorProvider, string mensajeError)
+        {
+            bool bandera = true;
+            if (control.SelectedIndex == -1)
             {
-                epPrimerApellido.SetError(txtPrimerApellido, "INGRESE PRIMER APELLIDO, ¡ES UN CAMPO OBLIGATORIO!");
-            }
-            else {
-                epPrimerApellido.Clear(); 
-            }
-
-            if (cbEtnia.SelectedIndex == -1)
-            {
-                epEtnia.SetError(cbEtnia, "SELECCIONE ETNIA, ¡ES UN CAMPO OBLIGATORIO!");
-            }
-
-            else
-            {
-                epEtnia.Clear();
-            }
-
-
-            if (cbSexo.SelectedIndex == -1)
-            {
-                epSexo.SetError(cbSexo, "SELECCIONE SEXO, ¡ES UN CAMPO OBLIGATORIO!");
-            }
-
-            else
-            {
-                epSexo.Clear();
-            }
-
-
-            if (cbDepartamento.SelectedIndex == -1)
-            {
-                epDepartamento.SetError(cbDepartamento, "SELECCIONE DEPARTAMENTO, ¡ES UN CAMPO OBLIGATORIO!");
-            }
-
-            else
-            {
-                epDepartamento.Clear();
-            }
-
-            if (cbMunicipio.SelectedIndex == -1)
-            {
-                epMunicipio.SetError(cbMunicipio, "SELECCIONE MUNICIPIO, ¡ES UN CAMPO OBLIGATORIO!");
-            }
-
-            else
-            {
-                epMunicipio.Clear();
-            }
-
-            if (txtDireccion.Text == string.Empty)
-            {
-                epDireccion.SetError(txtPrimerNombre, "INGRESE DIRECCION, ¡ES UN CAMPO OBLIGATORIO!");
+                errorProvider.SetError(control, mensajeError);
+                bandera = false;
             }
             else
             {
-                epDireccion.Clear();
+                errorProvider.Clear();
             }
+            return bandera;
+        }
 
-            if (txtBarrio.Text == string.Empty)
+        private void txtCedula_Leave(object sender, EventArgs e)
+        {
+            // Expresión regular para validar números enteros positivos
+            string patron = @"^\d{13}[A-Za-z]$";
+
+            // Creamos una instancia de Regex con la expresión regular
+            Regex regex = new Regex(patron);
+
+
+            mensaje = new Frm_Mensaje_Advertencia("El formato de cèdula es incorrecto");
+
+            // Comprobamos si el input coincide con el patrón
+            if (regex.IsMatch(txtCedula.Text))
             {
-                epBarrio.SetError(txtPrimerNombre, "INGRESE BARRIO O COMARCA, ¡ES UN CAMPO OBLIGATORIO!");
+               
+                //MessageBox.Show("El input es válido."); // Si coincide, el input es válido
             }
             else
             {
-                epBarrio.Clear();
+               /// MessageBox.Show("El input no es válido."); // Si no coincide, el input no es válido
+                mensaje.ShowDialog();
+                txtCedula.Clear();
+                txtCedula.Focus();
             }
 
+        }
 
-            if (cbAccesoInternet.SelectedIndex == -1)
+        private void ConvertirAMayusculas(object sender, EventArgs e)
+        {
+            TextBox textBox = sender as TextBox;
+            if (textBox != null)
             {
-                epAccesoInternet.SetError(cbAccesoInternet, "SELECCIONE OPCION, ¡ES UN CAMPO OBLIGATORIO!");
+                textBox.Text = textBox.Text.ToUpper();
             }
+        }
 
-            else
-            {
-                epAccesoInternet.Clear();
-            }
+        private void txtClaro_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNumeros(sender, e);
+        }
 
-            if (cbMano.SelectedIndex == -1)
-            {
-                epZurdoDiestro.SetError(cbMano, "SELECCIONE OPCION, ¡ES UN CAMPO OBLIGATORIO!");
-            }
+        private void txtTigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNumeros(sender, e);
+        }
 
-            else
-            {
-                epZurdoDiestro.Clear();
-            }
+        private void txtConvencional_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNumeros(sender, e);
+        }
 
-            if (cbDiscapacidad.SelectedIndex == -1)
-            {
-                epDiscapacidad.SetError(cbDiscapacidad, "SELECCIONE DISCAPACIDAD, ¡ES UN CAMPO OBLIGATORIO!");
-            }
-
-            else
-            {
-                epDiscapacidad.Clear();
-            }
+        private void btnSiguiente01_Click(object sender, EventArgs e)
+        {
 
         }
     }

@@ -139,6 +139,12 @@
     <Compile Include="Frm_Cliente.Designer.cs">
       <DependentUpon>Frm_Cliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_Mensaje_Advertencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Mensaje_Advertencia.Designer.cs">
+      <DependentUpon>Frm_Mensaje_Advertencia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Registro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,6 +197,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Cliente.resx">
       <DependentUpon>Frm_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Mensaje_Advertencia.resx">
+      <DependentUpon>Frm_Mensaje_Advertencia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Registro.resx">
       <DependentUpon>Frm_Registro.cs</DependentUpon>
@@ -445,6 +454,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icono_CSM.ico" />
+    <None Include="Resources\app_attention_22046.png" />
     <None Include="Resources\persona-clave.png" />
     <None Include="Resources\trabajando.png" />
     <None Include="Resources\controlar.png" />

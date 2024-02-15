@@ -67,14 +67,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="UNCSM.exe" size="2470912">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="UNCSM.exe" size="2477056">
       <assemblyIdentity name="UNCSM" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>FfW7qSYC/TRelBm8ggAwWzc07ZL1kf+ByzfAjZ4eq5Y=</dsig:DigestValue>
+        <dsig:DigestValue>YBx4WzNoW4euDenswCyoRB7ukX/9+joIvcHkNS/q/jw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
