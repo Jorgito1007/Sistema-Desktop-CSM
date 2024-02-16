@@ -169,6 +169,8 @@
             this.epAccesoInternet = new System.Windows.Forms.ErrorProvider(this.components);
             this.epZurdoDiestro = new System.Windows.Forms.ErrorProvider(this.components);
             this.epDiscapacidad = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label44 = new System.Windows.Forms.Label();
+            this.cbNacionalidad = new System.Windows.Forms.ComboBox();
             this.TabDatos.SuspendLayout();
             this.TabPersonales.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -222,7 +224,7 @@
             this.TabDatos.Location = new System.Drawing.Point(0, 0);
             this.TabDatos.Name = "TabDatos";
             this.TabDatos.SelectedIndex = 0;
-            this.TabDatos.Size = new System.Drawing.Size(1195, 615);
+            this.TabDatos.Size = new System.Drawing.Size(1195, 697);
             this.TabDatos.TabIndex = 0;
             this.TabDatos.TabStop = false;
             this.TabDatos.Tag = "";
@@ -237,7 +239,7 @@
             this.TabPersonales.Location = new System.Drawing.Point(4, 25);
             this.TabPersonales.Name = "TabPersonales";
             this.TabPersonales.Padding = new System.Windows.Forms.Padding(3);
-            this.TabPersonales.Size = new System.Drawing.Size(1187, 586);
+            this.TabPersonales.Size = new System.Drawing.Size(1187, 668);
             this.TabPersonales.TabIndex = 0;
             this.TabPersonales.Text = "DATOS PERSONALES";
             // 
@@ -257,11 +259,11 @@
             this.tableLayoutPanel1.RowCount = 6;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.88785F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 84.11215F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 116F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 178F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 68F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1181, 580);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 119F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 182F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 75F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 71F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1181, 657);
             this.tableLayoutPanel1.TabIndex = 51;
             // 
             // groupBox6
@@ -269,9 +271,9 @@
             this.groupBox6.Controls.Add(this.btnValidar01);
             this.groupBox6.Controls.Add(this.btnSiguiente01);
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox6.Location = new System.Drawing.Point(3, 533);
+            this.groupBox6.Location = new System.Drawing.Point(3, 588);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(1175, 44);
+            this.groupBox6.Size = new System.Drawing.Size(1175, 66);
             this.groupBox6.TabIndex = 52;
             this.groupBox6.TabStop = false;
             // 
@@ -285,7 +287,7 @@
             this.btnValidar01.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnValidar01.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnValidar01.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnValidar01.Location = new System.Drawing.Point(914, 5);
+            this.btnValidar01.Location = new System.Drawing.Point(914, 27);
             this.btnValidar01.Name = "btnValidar01";
             this.btnValidar01.Size = new System.Drawing.Size(124, 33);
             this.btnValidar01.TabIndex = 26;
@@ -304,7 +306,7 @@
             this.btnSiguiente01.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSiguiente01.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSiguiente01.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnSiguiente01.Location = new System.Drawing.Point(1044, 5);
+            this.btnSiguiente01.Location = new System.Drawing.Point(1044, 27);
             this.btnSiguiente01.Name = "btnSiguiente01";
             this.btnSiguiente01.Size = new System.Drawing.Size(112, 33);
             this.btnSiguiente01.TabIndex = 45;
@@ -319,7 +321,7 @@
             this.groupBox5.Controls.Add(this.label22);
             this.groupBox5.Controls.Add(this.cbMano);
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox5.Location = new System.Drawing.Point(3, 465);
+            this.groupBox5.Location = new System.Drawing.Point(3, 513);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(1175, 62);
             this.groupBox5.TabIndex = 0;
@@ -341,7 +343,6 @@
             this.cbDiscapacidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
             this.cbDiscapacidad.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbDiscapacidad.DisplayMember = "dsfsdf";
-            this.cbDiscapacidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDiscapacidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbDiscapacidad.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbDiscapacidad.ForeColor = System.Drawing.SystemColors.HighlightText;
@@ -366,7 +367,6 @@
             this.cbMano.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
             this.cbMano.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbMano.DisplayMember = "dsfsdf";
-            this.cbMano.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMano.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbMano.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbMano.ForeColor = System.Drawing.SystemColors.HighlightText;
@@ -395,9 +395,9 @@
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(3, 287);
+            this.groupBox1.Location = new System.Drawing.Point(3, 331);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1175, 172);
+            this.groupBox1.Size = new System.Drawing.Size(1175, 171);
             this.groupBox1.TabIndex = 40;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "INFORMACIÓN DE CONTACTO Y CONEXIÓN";
@@ -417,7 +417,6 @@
             this.cbTipoConexion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
             this.cbTipoConexion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbTipoConexion.DisplayMember = "dsfsdf";
-            this.cbTipoConexion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTipoConexion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbTipoConexion.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbTipoConexion.ForeColor = System.Drawing.SystemColors.HighlightText;
@@ -485,7 +484,6 @@
             this.cbProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
             this.cbProveedor.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbProveedor.DisplayMember = "dsfsdf";
-            this.cbProveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbProveedor.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbProveedor.ForeColor = System.Drawing.SystemColors.HighlightText;
@@ -510,7 +508,6 @@
             this.cbAccesoInternet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
             this.cbAccesoInternet.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbAccesoInternet.DisplayMember = "dsfsdf";
-            this.cbAccesoInternet.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbAccesoInternet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbAccesoInternet.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbAccesoInternet.ForeColor = System.Drawing.SystemColors.HighlightText;
@@ -625,9 +622,9 @@
             this.groupBox3.Controls.Add(this.txtMunicipio);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Font = new System.Drawing.Font("Tahoma", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(3, 171);
+            this.groupBox3.Location = new System.Drawing.Point(3, 212);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1175, 110);
+            this.groupBox3.Size = new System.Drawing.Size(1175, 113);
             this.groupBox3.TabIndex = 40;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "INFORMACIÓN DOMICILIAR";
@@ -637,12 +634,11 @@
             this.cbMunicipio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
             this.cbMunicipio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbMunicipio.DisplayMember = "dsfsdf";
-            this.cbMunicipio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMunicipio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbMunicipio.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbMunicipio.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.cbMunicipio.FormattingEnabled = true;
-            this.cbMunicipio.Location = new System.Drawing.Point(446, 37);
+            this.cbMunicipio.Location = new System.Drawing.Point(452, 40);
             this.cbMunicipio.Name = "cbMunicipio";
             this.cbMunicipio.Size = new System.Drawing.Size(193, 24);
             this.cbMunicipio.TabIndex = 10;
@@ -652,7 +648,6 @@
             this.cbDepartamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
             this.cbDepartamento.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbDepartamento.DisplayMember = "dsfsdf";
-            this.cbDepartamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDepartamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbDepartamento.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbDepartamento.ForeColor = System.Drawing.SystemColors.HighlightText;
@@ -662,6 +657,7 @@
             this.cbDepartamento.Size = new System.Drawing.Size(149, 24);
             this.cbDepartamento.TabIndex = 9;
             this.cbDepartamento.SelectedValueChanged += new System.EventHandler(this.cbDepartamento_SelectedValueChanged);
+            this.cbDepartamento.TextChanged += new System.EventHandler(this.cbDepartamento_TextChanged);
             // 
             // label10
             // 
@@ -752,7 +748,7 @@
             this.label24.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(386, 4);
+            this.label24.Location = new System.Drawing.Point(386, 7);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(408, 18);
             this.label24.TabIndex = 49;
@@ -760,6 +756,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label44);
+            this.groupBox2.Controls.Add(this.cbNacionalidad);
             this.groupBox2.Controls.Add(this.dtFecha);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label16);
@@ -779,9 +777,9 @@
             this.groupBox2.Controls.Add(this.txtPrimerNombre);
             this.groupBox2.Controls.Add(this.txtCedula);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(3, 29);
+            this.groupBox2.Location = new System.Drawing.Point(3, 36);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1175, 136);
+            this.groupBox2.Size = new System.Drawing.Size(1175, 170);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "INFORMACIÓN PERSONAL";
@@ -824,7 +822,6 @@
             this.cbEtnia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
             this.cbEtnia.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbEtnia.DisplayMember = "dsfsdf";
-            this.cbEtnia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEtnia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbEtnia.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEtnia.ForeColor = System.Drawing.SystemColors.HighlightText;
@@ -849,7 +846,6 @@
             this.cbEstadoCivil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
             this.cbEstadoCivil.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbEstadoCivil.DisplayMember = "dsfsdf";
-            this.cbEstadoCivil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEstadoCivil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbEstadoCivil.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEstadoCivil.ForeColor = System.Drawing.SystemColors.HighlightText;
@@ -874,7 +870,6 @@
             this.cbSexo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
             this.cbSexo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbSexo.DisplayMember = "dsfsdf";
-            this.cbSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSexo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbSexo.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSexo.ForeColor = System.Drawing.SystemColors.HighlightText;
@@ -1469,7 +1464,6 @@
             this.cbCentroEstudios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
             this.cbCentroEstudios.Cursor = System.Windows.Forms.Cursors.Default;
             this.cbCentroEstudios.DisplayMember = "dsfsdf";
-            this.cbCentroEstudios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCentroEstudios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbCentroEstudios.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCentroEstudios.ForeColor = System.Drawing.SystemColors.HighlightText;
@@ -1496,7 +1490,6 @@
             this.cbTipoBachillerato.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
             this.cbTipoBachillerato.Cursor = System.Windows.Forms.Cursors.Default;
             this.cbTipoBachillerato.DisplayMember = "dsfsdf";
-            this.cbTipoBachillerato.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTipoBachillerato.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbTipoBachillerato.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbTipoBachillerato.ForeColor = System.Drawing.SystemColors.HighlightText;
@@ -1523,7 +1516,6 @@
             this.cbMunicipio02.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
             this.cbMunicipio02.Cursor = System.Windows.Forms.Cursors.Default;
             this.cbMunicipio02.DisplayMember = "dsfsdf";
-            this.cbMunicipio02.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMunicipio02.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbMunicipio02.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbMunicipio02.ForeColor = System.Drawing.SystemColors.HighlightText;
@@ -1540,7 +1532,6 @@
             this.cbDepartamento02.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
             this.cbDepartamento02.Cursor = System.Windows.Forms.Cursors.Default;
             this.cbDepartamento02.DisplayMember = "dsfsdf";
-            this.cbDepartamento02.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDepartamento02.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbDepartamento02.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbDepartamento02.ForeColor = System.Drawing.SystemColors.HighlightText;
@@ -1590,7 +1581,6 @@
             this.cbAnioFin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
             this.cbAnioFin.Cursor = System.Windows.Forms.Cursors.Default;
             this.cbAnioFin.DisplayMember = "dsfsdf";
-            this.cbAnioFin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbAnioFin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbAnioFin.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbAnioFin.ForeColor = System.Drawing.SystemColors.HighlightText;
@@ -1863,11 +1853,35 @@
             // 
             this.epDiscapacidad.ContainerControl = this;
             // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.Location = new System.Drawing.Point(28, 146);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(105, 16);
+            this.label44.TabIndex = 51;
+            this.label44.Text = "NACIONALIDAD";
+            // 
+            // cbNacionalidad
+            // 
+            this.cbNacionalidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
+            this.cbNacionalidad.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbNacionalidad.DisplayMember = "dsfsdf";
+            this.cbNacionalidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbNacionalidad.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbNacionalidad.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.cbNacionalidad.FormattingEnabled = true;
+            this.cbNacionalidad.Location = new System.Drawing.Point(147, 138);
+            this.cbNacionalidad.Name = "cbNacionalidad";
+            this.cbNacionalidad.Size = new System.Drawing.Size(152, 24);
+            this.cbNacionalidad.TabIndex = 50;
+            // 
             // Matricula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1195, 615);
+            this.ClientSize = new System.Drawing.Size(1195, 697);
             this.Controls.Add(this.TabDatos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Matricula";
@@ -2069,5 +2083,7 @@
         private System.Windows.Forms.ErrorProvider epAccesoInternet;
         private System.Windows.Forms.ErrorProvider epZurdoDiestro;
         private System.Windows.Forms.ErrorProvider epDiscapacidad;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.ComboBox cbNacionalidad;
     }
 }

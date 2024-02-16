@@ -140,7 +140,7 @@ namespace Ginmasio
 
         private void txtQuimi4_Leave(object sender, EventArgs e)
         {
-            if (Valida_Nota(txtFis4.Text) == false)
+            if (Valida_Nota(txtQuimi4.Text) == false)
             {
                 txtQuimi4.Clear();
                 txtQuimi4.Focus();
@@ -212,11 +212,14 @@ namespace Ginmasio
             }
 
             cbMunicipio.Items.Clear();
+            cbMunicipio.Text = "";
             foreach (DataRow row in tbl_Municipio.Rows)
             {
                 cbMunicipio.Items.Add(Convert.ToString(row["Nombre"]));
             }
-            //llenar el cb de Municipio
+            // Establecer el modo de autocompletado
+            cbMunicipio.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cbMunicipio.AutoCompleteSource = AutoCompleteSource.ListItems;
 
         }
 
@@ -279,7 +282,7 @@ namespace Ginmasio
             {
                 /// MessageBox.Show("El input no es válido."); // Si no coincide, el input no es válido
                 mensaje.ShowDialog();
-                txtCedula.Clear();
+                //txtCedula.Clear();
                 txtCedula.Focus();
             }
 
@@ -340,7 +343,9 @@ namespace Ginmasio
             int nota;
             if (Texbox == "")
             {
-                MessageBox.Show("DEBE INGRESAR UNA NOTA!");
+                Frm_Mensaje_Advertencia mensaje = new Frm_Mensaje_Advertencia("DEBE INGRESAR UNA NOTA!");
+                mensaje.ShowDialog();
+                //MessageBox.Show("DEBE INGRESAR UNA NOTA!");
                 bandera = false;
             }
             else
@@ -352,7 +357,9 @@ namespace Ginmasio
                 }
                 else
                 {
-                    MessageBox.Show("LA NOTA REGISTRADA NO PUEDE SER MAYOR QUE 100");
+                    Frm_Mensaje_Advertencia mensaje = new Frm_Mensaje_Advertencia("LA NOTA REGISTRADA NO PUEDE SER MAYOR QUE 100!");
+                    mensaje.ShowDialog();
+                    //MessageBox.Show("LA NOTA REGISTRADA NO PUEDE SER MAYOR QUE 100");
                     bandera = false;
                 }
             }
@@ -366,6 +373,9 @@ namespace Ginmasio
             {
                 cbDiscapacidad.Items.Add(Convert.ToString(row["Nombre"]).ToUpper());
             }
+            // Establecer el modo de autocompletado
+            cbDiscapacidad.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cbDiscapacidad.AutoCompleteSource = AutoCompleteSource.ListItems;
         }
 
         void llenarAccesoInternet()
@@ -378,7 +388,9 @@ namespace Ginmasio
             {
                 cbProveedor.Items.Add(Convert.ToString(row["ProveedorIntenet"]).ToUpper());
             }
-
+            // Establecer el modo de autocompletado
+            cbAccesoInternet.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cbAccesoInternet.AutoCompleteSource = AutoCompleteSource.ListItems;
         }
 
         void llenar_mano()
@@ -389,6 +401,13 @@ namespace Ginmasio
             cbTipoConexion.Items.Add("INTERNET MOVIL");
             cbTipoConexion.Items.Add("INTERNET RESINDENCIAL");
 
+            // Establecer el modo de autocompletado
+            cbMano.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cbMano.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+            // Establecer el modo de autocompletado
+            cbTipoConexion.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cbTipoConexion.AutoCompleteSource = AutoCompleteSource.ListItems;
         }
 
         void llenar_Departamento()
@@ -401,12 +420,21 @@ namespace Ginmasio
                 cbDepartamento.Items.Add(Convert.ToString(row["Nombre"]));
             }
 
+
+            // Establecer el modo de autocompletado
+            cbDepartamento.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cbDepartamento.AutoCompleteSource = AutoCompleteSource.ListItems;
+
             tbl_Departamento02.Clear();
             tbl_Departamento02 = prematricula.Mostrar_Departamento();
             foreach (DataRow row in tbl_Departamento02.Rows)
             {
                 cbDepartamento02.Items.Add(Convert.ToString(row["Nombre"]));
             }
+
+            // Establecer el modo de autocompletado
+            cbDepartamento02.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cbDepartamento02.AutoCompleteSource = AutoCompleteSource.ListItems;
         }
 
         void llenar_Departamento02()
@@ -418,6 +446,9 @@ namespace Ginmasio
             {
                 cbDepartamento02.Items.Add(Convert.ToString(row["Nombre"]));
             }
+            // Establecer el modo de autocompletado
+            cbDepartamento02.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cbDepartamento02.AutoCompleteSource = AutoCompleteSource.ListItems;
         }
 
         void llenar_Sexo()
@@ -428,6 +459,9 @@ namespace Ginmasio
             {
                 cbSexo.Items.Add(Convert.ToString(row["Nombre"]));
             }
+            // Establecer el modo de autocompletado
+            cbSexo.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cbSexo.AutoCompleteSource = AutoCompleteSource.ListItems;
         }
 
         void llenar_etnia()
@@ -438,6 +472,9 @@ namespace Ginmasio
             {
                 cbEtnia.Items.Add(Convert.ToString(row["Nombre"]));
             }
+            // Establecer el modo de autocompletado
+            cbEtnia.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cbEtnia.AutoCompleteSource = AutoCompleteSource.ListItems;
         }
 
         void llenar_Estado_Civil()
@@ -448,6 +485,9 @@ namespace Ginmasio
             {
                 cbEstadoCivil.Items.Add(Convert.ToString(row["Nombre"]));
             }
+            // Establecer el modo de autocompletado
+            cbEstadoCivil.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cbEstadoCivil.AutoCompleteSource = AutoCompleteSource.ListItems;
         }
 
         void llenar_anio() 
@@ -467,6 +507,10 @@ namespace Ginmasio
             {
                 cbAnioFin.Items.Add(numero);
             }
+
+            // Establecer el modo de autocompletado
+            cbAnioFin.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cbAnioFin.AutoCompleteSource = AutoCompleteSource.ListItems;
         }
 
         void llenarTipoBachillerato()
@@ -476,6 +520,9 @@ namespace Ginmasio
             {
                 cbTipoBachillerato.Items.Add(Convert.ToString(row["tipo"]).ToUpper());
             }
+            // Establecer el modo de autocompletado
+            cbTipoBachillerato.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cbTipoBachillerato.AutoCompleteSource = AutoCompleteSource.ListItems;
         }
 
         public bool ValidarCamposTab01()
@@ -613,6 +660,7 @@ namespace Ginmasio
             string departamento;
             departamento = cbDepartamento02.Text;
             cbMunicipio02.Items.Clear();
+            cbMunicipio02.Text = "";
 
             foreach (DataRow row in tbl_Departamento02.Rows)
             {
@@ -627,6 +675,10 @@ namespace Ginmasio
             {
                 cbMunicipio02.Items.Add(Convert.ToString(row["Nombre"]));
             }
+
+
+            cbMunicipio02.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cbMunicipio02.AutoCompleteSource = AutoCompleteSource.ListItems;
             //llenar el cb de Municipio
         }
 
@@ -634,7 +686,9 @@ namespace Ginmasio
         {
             string municipio;
             municipio = cbMunicipio02.Text;
+            cbCentroEstudios.Text = "";
             cbCentroEstudios.Items.Clear();
+            
 
             foreach (DataRow row in tbl_Municipio02.Rows)
             {
@@ -651,6 +705,14 @@ namespace Ginmasio
             }
             //llenar el cb de Municipio
         }
+
+        private void cbDepartamento_TextChanged(object sender, EventArgs e)
+        {
+            cbDepartamento.Text = cbDepartamento.Text.ToUpper();
+            // Mover el cursor al final del texto
+            cbDepartamento.SelectionStart = cbDepartamento.Text.Length;
+        }
+
 
         //==================================FUNCIONES================================== ---->  FIN
     }
