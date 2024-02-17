@@ -525,6 +525,7 @@ namespace Ginmasio
             cbTipoBachillerato.AutoCompleteSource = AutoCompleteSource.ListItems;
         }
 
+        // validando todos los campos //
         public bool ValidarCamposTab01()
         {
             bool bandera = true;
@@ -712,6 +713,14 @@ namespace Ginmasio
             // Mover el cursor al final del texto
             cbDepartamento.SelectionStart = cbDepartamento.Text.Length;
         }
+
+        private void cbMunicipio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        
+
 
 
         //==================================FUNCIONES================================== ---->  FIN

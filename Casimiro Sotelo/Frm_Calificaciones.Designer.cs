@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.cbgrupos = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.txtdocente = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -42,7 +42,6 @@
             this.txtasignatura = new System.Windows.Forms.TextBox();
             this.txtturno = new System.Windows.Forms.TextBox();
             this.txtcarrera = new System.Windows.Forms.TextBox();
-            this.txtgrupo = new System.Windows.Forms.TextBox();
             this.txtareaconocimiento = new System.Windows.Forms.TextBox();
             this.btnmostrarlista = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
@@ -53,10 +52,13 @@
             this.dataGridLista = new System.Windows.Forms.DataGridView();
             this.btnnotas = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cbgrupo = new System.Windows.Forms.ComboBox();
+            this.cbgrupos.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridLista)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -65,23 +67,23 @@
             this.label1.BackColor = System.Drawing.SystemColors.Control;
             this.label1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Blue;
-            this.label1.Location = new System.Drawing.Point(451, 9);
+            this.label1.Location = new System.Drawing.Point(463, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(252, 18);
             this.label1.TabIndex = 6;
             this.label1.Text = " REGISTRO DE CALIFICACIONES";
             // 
-            // panel1
+            // cbgrupos
             // 
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.txtdocente);
-            this.panel1.Controls.Add(this.btnBuscar);
-            this.panel1.Controls.Add(this.txtcedula);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Location = new System.Drawing.Point(13, 61);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1001, 86);
-            this.panel1.TabIndex = 7;
+            this.cbgrupos.Controls.Add(this.label2);
+            this.cbgrupos.Controls.Add(this.txtdocente);
+            this.cbgrupos.Controls.Add(this.btnBuscar);
+            this.cbgrupos.Controls.Add(this.txtcedula);
+            this.cbgrupos.Controls.Add(this.label7);
+            this.cbgrupos.Location = new System.Drawing.Point(13, 61);
+            this.cbgrupos.Name = "cbgrupos";
+            this.cbgrupos.Size = new System.Drawing.Size(1001, 86);
+            this.cbgrupos.TabIndex = 7;
             // 
             // label2
             // 
@@ -139,12 +141,12 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.cbgrupo);
             this.panel2.Controls.Add(this.txtcodasig);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.txtasignatura);
             this.panel2.Controls.Add(this.txtturno);
             this.panel2.Controls.Add(this.txtcarrera);
-            this.panel2.Controls.Add(this.txtgrupo);
             this.panel2.Controls.Add(this.txtareaconocimiento);
             this.panel2.Controls.Add(this.btnmostrarlista);
             this.panel2.Controls.Add(this.label8);
@@ -198,14 +200,6 @@
             this.txtcarrera.Name = "txtcarrera";
             this.txtcarrera.Size = new System.Drawing.Size(389, 20);
             this.txtcarrera.TabIndex = 53;
-            // 
-            // txtgrupo
-            // 
-            this.txtgrupo.Enabled = false;
-            this.txtgrupo.Location = new System.Drawing.Point(639, 27);
-            this.txtgrupo.Name = "txtgrupo";
-            this.txtgrupo.Size = new System.Drawing.Size(168, 20);
-            this.txtgrupo.TabIndex = 52;
             // 
             // txtareaconocimiento
             // 
@@ -293,14 +287,14 @@
             this.dataGridLista.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridLista.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridLista.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridLista.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridLista.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridLista.Location = new System.Drawing.Point(83, 12);
             this.dataGridLista.Name = "dataGridLista";
@@ -334,24 +328,47 @@
             this.panel3.Size = new System.Drawing.Size(1002, 295);
             this.panel3.TabIndex = 44;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::UNCSM.Properties.Resources.calificaciones;
+            this.pictureBox1.Location = new System.Drawing.Point(410, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(57, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 45;
+            this.pictureBox1.TabStop = false;
+            // 
+            // cbgrupo
+            // 
+            this.cbgrupo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
+            this.cbgrupo.CausesValidation = false;
+            this.cbgrupo.ForeColor = System.Drawing.SystemColors.Info;
+            this.cbgrupo.FormattingEnabled = true;
+            this.cbgrupo.Location = new System.Drawing.Point(638, 25);
+            this.cbgrupo.Name = "cbgrupo";
+            this.cbgrupo.Size = new System.Drawing.Size(156, 21);
+            this.cbgrupo.TabIndex = 58;
+            // 
             // Frm_Calificaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1026, 620);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.cbgrupos);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_Calificaciones";
             this.Text = "Frm_Calificaciones";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.cbgrupos.ResumeLayout(false);
+            this.cbgrupos.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridLista)).EndInit();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -360,7 +377,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel cbgrupos;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtcedula;
         private System.Windows.Forms.Label label2;
@@ -377,11 +394,12 @@
         private System.Windows.Forms.TextBox txtasignatura;
         private System.Windows.Forms.TextBox txtturno;
         private System.Windows.Forms.TextBox txtcarrera;
-        private System.Windows.Forms.TextBox txtgrupo;
         private System.Windows.Forms.TextBox txtareaconocimiento;
         private System.Windows.Forms.TextBox txtcodasig;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnnotas;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox cbgrupo;
     }
 }

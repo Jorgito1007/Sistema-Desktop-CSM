@@ -261,3 +261,35 @@ C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-
 C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\Ginmasio.Matricula.resources
 C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\UNCSM.FrmSalida.resources
 C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\UNCSM.Frm_Mensaje_Advertencia.resources
+C:\Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\bin\Debug\UNCSM.exe.config
+C:\Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\bin\Debug\UNCSM.exe.manifest
+C:\Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\bin\Debug\UNCSM.application
+C:\Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\bin\Debug\UNCSM.exe
+C:\Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\bin\Debug\UNCSM.pdb
+C:\Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\bin\Debug\Capa Negocio.dll
+C:\Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\bin\Debug\Capa Datos.dll
+C:\Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\bin\Debug\Capa Negocio.pdb
+C:\Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\bin\Debug\Capa Datos.pdb
+C:\Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\Capa Presentacion.csprojAssemblyReference.cache
+C:\Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\Ginmasio.Bienvenida_Login.resources
+C:\Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\UNCSM.FrmSalida.resources
+C:\Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\Ginmasio.Frm_Alerta.resources
+C:\Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\Ginmasio.Frm_Calificaciones.resources
+C:\Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\Ginmasio.Frm_Docente.resources
+C:\Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\Ginmasio.Frm_GrupDoc.resources
+C:\Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\Ginmasio.Frm_Login.resources
+C:\Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\Ginmasio.Frm_LogoReloj.resources
+C:\Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\Ginmasio.Frm_Cliente.resources
+C:\Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\UNCSM.Frm_Mensaje_Advertencia.resources
+C:\Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\Ginmasio.Frm_Registro.resources
+C:\Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\Ginmasio.Matricula.resources
+C:\Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\Ginmasio.Mensaje_Suscripcion.resources
+C:\Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\UNCSM.Properties.Resources.resources
+C:\Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\Ginmasio.Frm_Inicio.resources
+C:\Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\Capa Presentacion.csproj.GenerateResource.cache
+C:\Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\Capa Presentacion.csproj.CoreCompileInputs.cache
+C:\Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\UNCSM.exe.manifest
+C:\Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\UNCSM.application
+C:\Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\Capa Presentacion.csproj.CopyComplete
+C:\Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\UNCSM.exe
+C:\Repositorio\Sistema-Desktop-CSM\Casimiro Sotelo\obj\Debug\UNCSM.pdb

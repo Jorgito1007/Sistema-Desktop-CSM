@@ -31,8 +31,23 @@ namespace Capa_Negocio
             return Tabla_Docentes; // retorno de la tabla 
         }
 
-       
-        
+        public DataTable Mostrar_Roles()
+        {
+            DataTable Tabla_roles = new DataTable(); // Instancia de un objeto de tipo DataTable para recibir la tabla que devuelve el objeto SqlDataAdapter
+            conexion.conexion_datos.Open(); // se abre la conexión para el comando
+            Comando = new SqlCommand(); // instancia del objeto de tipo SqlCommand
+            Comando.CommandText = "MOSTRAR_TIPO_ROL"; // se pasa el procedimiento almacenado
+            Comando.CommandType = System.Data.CommandType.StoredProcedure;
+            Comando.Connection = conexion.conexion_datos; // se abre la conexión para el comando
+            Adaptador = new SqlDataAdapter(Comando); // se recibe la tabla producto de la ejecución del procedimiento
+            Adaptador.Fill(Tabla_roles); // con el SqlDataAdapter se llena la tabla
+            conexion.conexion_datos.Close(); // se cierra la conexión
+            return Tabla_roles; // retorno de la tabla 
+        }
+
+
+
+
     }
 
 }

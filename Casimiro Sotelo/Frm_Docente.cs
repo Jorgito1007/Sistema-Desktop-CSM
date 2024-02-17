@@ -6,8 +6,10 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UNCSM;
 
 namespace Ginmasio
 {
@@ -16,8 +18,17 @@ namespace Ginmasio
 
      
         campus insertar = new campus();
+        CRUD_Cliente prematricula = new CRUD_Cliente();
         Mensaje_Suscripcion mensaje = new Mensaje_Suscripcion();
+        CRUD_GDocentes Mostrar_rol = new CRUD_GDocentes();
+        DataTable tbl_Departamento = new DataTable(); //DataTable para almacenar los departamentos
+        DataTable tbl_Departamento02 = new DataTable(); //DataTable para almacenar los departamentos
+        DataTable tbl_Municipio = new DataTable();  //DataTable para almacenar los municipios en base al ID de cada Departamento
+        DataTable tbl_Municipio02 = new DataTable();
         Frm_Alerta mensaje_02 = new Frm_Alerta();
+        Frm_Mensaje_Advertencia mensaje01;
+        DataTable tabla_rol = new DataTable();
+        
         //Variables Goblales********************************************
         public static string @GOVERMENT_ID,@PREFIX, @NAME01, @NAME02, @LASTNAME01, @LASTNAME02, @GENDER, @ADDRES_COMPLETE, @ADDRES_MAIL, @PHONE01, @P_DESCRIPTION01, @PHONE02, @P_DESCRIPTION02, @PHONE03, @P_DESCRIPTION03;
 
@@ -27,7 +38,23 @@ namespace Ginmasio
         }
 
         public static int @ID_ETNIA, @ID_MARITAL_STATUS, @ID_REGLIGION, @ID_BIRTH_COUNTRY, @ID_COUNTRY_LIVE, @ID_DEPARTMENTO, @ID_MUNICIPIO, @PEOPLE_TYPE;
+
+      
+
         public static DateTime @BIRTH_DATE;
+
+        private void btnvalidar_Click(object sender, EventArgs e)
+        {
+            if (ValidarCamposTab01() == true)
+            {
+                btnguardar.Enabled=true;
+            }
+            else
+            {
+                Frm_Mensaje_Advertencia mensaje = new Frm_Mensaje_Advertencia("¡CAMPOS INCOMPLETOS!");
+                mensaje.ShowDialog();
+            }
+        }
 
         public static String genero = "";
         public Frm_Docente()
@@ -36,45 +63,23 @@ namespace Ginmasio
             llenar_cbSexo();
             llenar_cbestadocivil();
             llenar_cbnivelacademico();
+            llenar_rol();
+            llenar_Departamento();
+            txtConvencional.MaxLength = 8;
+            txtClaro.MaxLength = 8;
+            txtTigo.MaxLength = 8;
+            txtTigo.KeyPress += txtTigo_KeyPress;
+            txtConvencional.KeyPress += txtConvencional_KeyPress;
+            txtClaro.KeyPress += txtClaro_KeyPress;
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
+       
         private void btnguardar_Click(object sender, EventArgs e)
         {
             guardar();
         }
 
-        private bool ValidarCampos()
-        {
-
-            if (string.IsNullOrWhiteSpace(txtMail.Text) ||
-                string.IsNullOrWhiteSpace(txtCedula.Text) ||
-                string.IsNullOrWhiteSpace(cbnivelacademico.Text) ||
-                string.IsNullOrWhiteSpace(txtPrimer_Nombre.Text) ||
-                string.IsNullOrWhiteSpace(txtPrimerApellido.Text) ||
-                string.IsNullOrWhiteSpace(cbSexo.Text) ||
-                string.IsNullOrWhiteSpace(cbestadocivil.Text) ||
-                string.IsNullOrWhiteSpace(cbnivelacademico.Text) ||
-                DtpFecha_Nac.Value == null)
-            {
-                mensaje_02.ShowDialog();
-                return false;
-            }
-
-            // Puedes agregar más condiciones de validación según tus necesidades.
-
-            return true;
-        }
-
+     
        
         void guardar()
         {
@@ -84,7 +89,7 @@ namespace Ginmasio
             @P_DESCRIPTION01 = "CLARO";
             @PHONE02 = txtTigo.Text;
             @P_DESCRIPTION02 = "TIGO";
-            @PHONE03 = txtCovencional.Text;
+            @PHONE03 = txtConvencional.Text;
             @P_DESCRIPTION03 = "CONVENCIONAL";
             @PHONE01 = txtClaro.Text;
             @ID_BIRTH_COUNTRY = 404;
@@ -107,7 +112,20 @@ namespace Ginmasio
             @GENDER = genero;
             @ADDRES_COMPLETE = txtDireccion.Text;
             @ADDRES_MAIL = txtMail.Text;
-            @PEOPLE_TYPE = 16;
+
+            //tabla_rol
+            String rol = cbtipousuario.Text;
+            foreach (DataRow row in tabla_rol.Rows)
+            {
+                if (rol == Convert.ToString(row["TIPO_ROL"]))
+                {
+                    @PEOPLE_TYPE = Convert.ToInt32(row["ID_USUARIO"]);
+                }
+               
+            }
+
+
+           
             @BIRTH_DATE = Convert.ToDateTime(DtpFecha_Nac.Text);
             salida =  insertar.Insertar_Estudiante(@GOVERMENT_ID, @PREFIX, @NAME01, @NAME02, @LASTNAME01, @LASTNAME02, @ID_ETNIA, @GENDER, @ID_MARITAL_STATUS, @ID_REGLIGION, @ADDRES_COMPLETE, @BIRTH_DATE, @ID_BIRTH_COUNTRY, @ID_COUNTRY_LIVE, @ID_DEPARTMENTO, @ID_MUNICIPIO, @ADDRES_MAIL, @PHONE01, @P_DESCRIPTION01, @PHONE02, @P_DESCRIPTION02, @PHONE03, @P_DESCRIPTION03, @PEOPLE_TYPE);
            
@@ -124,9 +142,47 @@ namespace Ginmasio
          
             limpiar_texbox();
 
-          
-        
         }
+
+        void llenar_Departamento()
+        {
+
+            tbl_Departamento.Clear();
+            tbl_Departamento = prematricula.Mostrar_Departamento();
+            foreach (DataRow row in tbl_Departamento.Rows)
+            {
+                cbDepartamento.Items.Add(Convert.ToString(row["Nombre"]));
+            }
+
+
+            // Establecer el modo de autocompletado
+            cbDepartamento.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cbDepartamento.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+            tbl_Departamento.Clear();
+            tbl_Departamento = prematricula.Mostrar_Departamento();
+            foreach (DataRow row in tbl_Departamento.Rows)
+            {
+                cbDepartamento.Items.Add(Convert.ToString(row["Nombre"]));
+            }
+
+           
+        }
+
+        void llenar_rol()
+        {
+            tabla_rol = Mostrar_rol.Mostrar_Roles();
+
+            // Limpiamos el ComboBox antes de agregar elementos
+            cbtipousuario.Items.Clear();
+
+            foreach (DataRow row in tabla_rol.Rows)
+            {
+                cbtipousuario.Items.Add(Convert.ToString(row["TIPO_ROL"]));
+            }
+
+        }
+
 
         public void llenar_cbSexo()
         {
@@ -165,10 +221,10 @@ namespace Ginmasio
             txtSegundo_Nombre.Clear();
             txtPrimerApellido.Clear();
             txtSegundoApellido.Clear();
-            txtDepartamento.Clear();
-            txtmunicipio.Clear();
+            cbDepartamento.SelectedIndex = -1; ;
+            cbMunicipio.SelectedIndex = -1;
             txtDireccion.Clear();
-            txtCovencional.Clear();
+            txtConvencional.Clear();
             txtClaro.Clear();
             txtTigo.Clear();
             txtMail.Clear();
@@ -178,7 +234,166 @@ namespace Ginmasio
             cbSexo.SelectedIndex = -1;
             cbestadocivil.SelectedIndex = -1;
             cbnivelacademico.SelectedIndex = -1;
+            cbtipousuario.SelectedIndex = -1;
         }
+        private void txtCedula_Leave(object sender, EventArgs e)
+        {
+            // Expresión regular para validar números enteros positivos
+            string patron = @"^\d{13}[A-Za-z]$";
+
+            // Creamos una instancia de Regex con la expresión regular
+            Regex regex = new Regex(patron);
+
+
+            mensaje01 = new Frm_Mensaje_Advertencia("El formato de cèdula es incorrecto");
+
+            // Comprobamos si el input coincide con el patrón
+            if (regex.IsMatch(txtCedula.Text))
+            {
+
+                //MessageBox.Show("El input es válido."); // Si coincide, el input es válido
+            }
+            else
+            {
+                /// MessageBox.Show("El input no es válido."); // Si no coincide, el input no es válido
+                mensaje01.ShowDialog();
+                //txtCedula.Clear();
+                txtCedula.Focus();
+            }
+
+        }
+
+        private void txtTigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNumeros(sender, e);
+        }
+
+        private void txtConvencional_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNumeros(sender, e);
+        }
+        private void txtClaro_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNumeros(sender, e);
+        }
+
+
+        void SoloNumeros(object sender, KeyPressEventArgs e)
+        {
+            // Verificar si la tecla presionada es un número o la tecla de retroceso (backspace)
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                // Si no es un número ni la tecla de retroceso, se ignora la tecla presionada
+                e.Handled = true;
+            }
+        }
+        // validando todos los campos //
+        public bool ValidarCamposTab01()
+        {
+            bool bandera = true;
+
+            // Llamadas a las funciones para validar cada campo
+            if (false == ValidarCampo(txtCedula, epCedula, "INGRESE CÉDULA, ¡ES UN CAMPO OBLIGATORIO!"))
+            {
+                bandera = false;
+            }
+
+            if (false == ValidarComboBox(cbtipousuario, epUsuario, "INGRESE TIPO DE USUARIO, ¡ES UN CAMPO OBLIGATORIO!"))
+            {
+                bandera = false;
+            }
+            if (false == ValidarCampo(txtPrimer_Nombre, epCedula, "INGRESE PRIMER NOMBRE, ¡ES UN CAMPO OBLIGATORIO!"))
+            {
+                bandera = false;
+            }
+            if (false == ValidarCampo(txtPrimerApellido, epPrimerApellido, "INGRESE PRIMER APELLIDO, ¡ES UN CAMPO OBLIGATORIO!"))
+            {
+                bandera = false;
+            }
+            
+            if (false == ValidarComboBox(cbSexo, epSexo, "SELECCIONE SEXO, ¡ES UN CAMPO OBLIGATORIO!"))
+            {
+                bandera = true;
+            }
+            if (false == ValidarComboBox(cbDepartamento, epDepartamento, "SELECCIONE DEPARTAMENTO, ¡ES UN CAMPO OBLIGATORIO!"))
+            { bandera = false; }
+            if (false == ValidarComboBox(cbMunicipio, epMunicipio, "SELECCIONE MUNICIPIO, ¡ES UN CAMPO OBLIGATORIO!"))
+            { bandera = false; }
+            if (false == ValidarCampo(txtDireccion, epDireccion, "INGRESE DIRECCION, ¡ES UN CAMPO OBLIGATORIO!"))
+            { bandera = false; }
+            
+            if (false == ValidarComboBox(cbestadocivil, epEstadoCivil, "SELECCIONE ESTADO CIVIL, ¡ES UN CAMPO OBLIGATORIO!"))
+            { bandera = false; }
+
+            return bandera;
+        }
+
+        bool ValidarCampo(TextBoxBase control, ErrorProvider errorProvider, string mensajeError)
+        {
+            bool bandera = true;
+            if (control.Text == string.Empty)
+            {
+                errorProvider.SetError(control, mensajeError);
+                bandera = false;
+            }
+            else
+            {
+                errorProvider.Clear();
+                bandera = true;
+            }
+            return bandera;
+        }
+
+        bool ValidarComboBox(ComboBox control, ErrorProvider errorProvider, string mensajeError)
+        {
+            bool bandera = true;
+            if (control.SelectedIndex == -1)
+            {
+                errorProvider.SetError(control, mensajeError);
+                bandera = false;
+            }
+            else
+            {
+                errorProvider.Clear();
+            }
+            return bandera;
+        }
+
+
+        private void cbDepartamento_TextChanged(object sender, EventArgs e)
+        {
+            cbDepartamento.Text = cbDepartamento.Text.ToUpper();
+            // Mover el cursor al final del texto
+            cbDepartamento.SelectionStart = cbDepartamento.Text.Length;
+        }
+
+
+        private void cbDepartamento_SelectedValueChanged(object sender, EventArgs e)
+        {
+            //se utiliza este evento para encontrar el departemanto seleccionado y asi obtener los municipios de dicho departamento
+            string departamento;
+            departamento = cbDepartamento.Text;
+
+            foreach (DataRow row in tbl_Departamento.Rows)
+            {
+                if (Convert.ToString(row["Nombre"]) == departamento)
+                {
+                    tbl_Municipio = prematricula.Mostrar_Municipio(Convert.ToInt32(row["id"]));
+                }
+            }
+
+            cbMunicipio.Items.Clear();
+            cbMunicipio.Text = "";
+            foreach (DataRow row in tbl_Municipio.Rows)
+            {
+                cbMunicipio.Items.Add(Convert.ToString(row["Nombre"]));
+            }
+            // Establecer el modo de autocompletado
+            cbMunicipio.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cbMunicipio.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+        }
+       
 
 
     }

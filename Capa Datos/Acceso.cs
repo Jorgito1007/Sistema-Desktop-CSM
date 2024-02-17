@@ -9,10 +9,10 @@ namespace Capa_Datos
 {
      public class Acceso
     {
-        //private String Cadena = "Data Source=LEONELC\\SQLSERVER;Initial Catalog=campus; Integrated Security=True";
+        private String Cadena = "Data Source=LEONELC\\SQLSERVER;Initial Catalog=campus; Integrated Security=True";
 
 
-        private String Cadena = "Persist Security Info=False;User ID=sa;Password=meza93;Initial Catalog=campus;Server=DESKTOP-AE7Q4HD\\SQLSERVER_LOCAL";
+        //private String Cadena = "Persist Security Info=False;User ID=sa;Password=meza93;Initial Catalog=campus;Server=DESKTOP-AE7Q4HD\\SQLSERVER_LOCAL";
         //private String Cadena = "Persist Security Info=False;User ID=sa;Password=meza93;Initial Catalog=campus;Server=DESKTOP-AE7Q4HD\\SQLSERVER_LOCAL";
 
         public SqlConnection conexion_datos; // se declara una objeto de tipo SqlConnection para establecer la conexion

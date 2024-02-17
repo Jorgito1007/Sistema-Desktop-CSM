@@ -454,6 +454,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icono_CSM.ico" />
+    <None Include="Resources\grupos.png" />
+    <None Include="Resources\calificaciones.png" />
     <None Include="Resources\app_attention_22046.png" />
     <None Include="Resources\persona-clave.png" />
     <None Include="Resources\trabajando.png" />
