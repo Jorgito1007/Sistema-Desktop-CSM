@@ -88,12 +88,3 @@ C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-
 C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Capa Negocio\obj\Debug\Capa Negocio.csproj.CopyComplete
 C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Capa Negocio\obj\Debug\Capa Negocio.dll
 C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Capa Negocio\obj\Debug\Capa Negocio.pdb
-C:\Repositorio\Sistema-Desktop-CSM\Capa Negocio\bin\Debug\Capa Negocio.dll
-C:\Repositorio\Sistema-Desktop-CSM\Capa Negocio\bin\Debug\Capa Negocio.pdb
-C:\Repositorio\Sistema-Desktop-CSM\Capa Negocio\bin\Debug\Capa Datos.dll
-C:\Repositorio\Sistema-Desktop-CSM\Capa Negocio\bin\Debug\Capa Datos.pdb
-C:\Repositorio\Sistema-Desktop-CSM\Capa Negocio\obj\Debug\Capa Negocio.csprojAssemblyReference.cache
-C:\Repositorio\Sistema-Desktop-CSM\Capa Negocio\obj\Debug\Capa Negocio.csproj.CoreCompileInputs.cache
-C:\Repositorio\Sistema-Desktop-CSM\Capa Negocio\obj\Debug\Capa Negocio.csproj.CopyComplete
-C:\Repositorio\Sistema-Desktop-CSM\Capa Negocio\obj\Debug\Capa Negocio.dll
-C:\Repositorio\Sistema-Desktop-CSM\Capa Negocio\obj\Debug\Capa Negocio.pdb

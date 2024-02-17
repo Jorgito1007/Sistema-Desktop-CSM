@@ -57,9 +57,3 @@ C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-
 C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Capa Datos\obj\Debug\Capa Datos.csproj.CoreCompileInputs.cache
 C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Capa Datos\obj\Debug\Capa Datos.dll
 C:\Users\Sami\Documents\Sistemas Meza\Sistema Desktop UNCSM Repositorio\Sistema-Desktop-CSM\Capa Datos\obj\Debug\Capa Datos.pdb
-C:\Repositorio\Sistema-Desktop-CSM\Capa Datos\bin\Debug\Capa Datos.dll
-C:\Repositorio\Sistema-Desktop-CSM\Capa Datos\bin\Debug\Capa Datos.pdb
-C:\Repositorio\Sistema-Desktop-CSM\Capa Datos\obj\Debug\Capa Datos.csprojAssemblyReference.cache
-C:\Repositorio\Sistema-Desktop-CSM\Capa Datos\obj\Debug\Capa Datos.csproj.CoreCompileInputs.cache
-C:\Repositorio\Sistema-Desktop-CSM\Capa Datos\obj\Debug\Capa Datos.dll
-C:\Repositorio\Sistema-Desktop-CSM\Capa Datos\obj\Debug\Capa Datos.pdb

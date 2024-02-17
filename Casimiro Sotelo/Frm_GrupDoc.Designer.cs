@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtcodasig = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
             this.cbasignatura = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -63,11 +61,11 @@
             this.txtPrimer_Nombre = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtcodasig = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -97,24 +95,6 @@
             this.groupBox1.TabIndex = 63;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ASIGNAR GRUPOS";
-            // 
-            // txtcodasig
-            // 
-            this.txtcodasig.Enabled = false;
-            this.txtcodasig.Location = new System.Drawing.Point(854, 180);
-            this.txtcodasig.Name = "txtcodasig";
-            this.txtcodasig.Size = new System.Drawing.Size(100, 23);
-            this.txtcodasig.TabIndex = 78;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(700, 183);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(148, 16);
-            this.label14.TabIndex = 77;
-            this.label14.Text = "CÒDIGO ASIGNATURA:";
             // 
             // cbasignatura
             // 
@@ -466,7 +446,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.groupBox1);
@@ -481,24 +460,32 @@
             this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label11.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Blue;
-            this.label11.Location = new System.Drawing.Point(415, 31);
+            this.label11.Location = new System.Drawing.Point(415, 23);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(202, 18);
+            this.label11.Size = new System.Drawing.Size(257, 23);
             this.label11.TabIndex = 64;
             this.label11.Text = "ASIGNACIÒN DE GRUPOS";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
+            // label14
             // 
-            this.pictureBox1.Image = global::UNCSM.Properties.Resources.grupos;
-            this.pictureBox1.Location = new System.Drawing.Point(344, 7);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(65, 58);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 65;
-            this.pictureBox1.TabStop = false;
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(700, 183);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(148, 16);
+            this.label14.TabIndex = 77;
+            this.label14.Text = "CÒDIGO ASIGNATURA:";
+            // 
+            // txtcodasig
+            // 
+            this.txtcodasig.Enabled = false;
+            this.txtcodasig.Location = new System.Drawing.Point(854, 180);
+            this.txtcodasig.Name = "txtcodasig";
+            this.txtcodasig.Size = new System.Drawing.Size(100, 23);
+            this.txtcodasig.TabIndex = 78;
             // 
             // Frm_GrupDoc
             // 
@@ -516,7 +503,6 @@
             this.groupBox2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -557,6 +543,5 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtcodasig;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

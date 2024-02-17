@@ -42,7 +42,7 @@ namespace Ginmasio
         {
             btnnotas.Enabled=true;
             btnmostrarlista.Enabled = false;
-            string grupo = cbgrupo.Text;
+            string grupo = txtgrupo.Text;
             string cod_asig = txtcodasig.Text;
 
             // Llamar al método de búsqueda
@@ -182,7 +182,7 @@ namespace Ginmasio
                     txtdocente.Text = Convert.ToString(row["NOMBRE_DOCENTE"]);
                     txtareaconocimiento.Text = Convert.ToString(row["AREA_CONOCIMIENTO"]);
                     txtcarrera.Text = Convert.ToString(row["CARRERA"]);
-                    cbgrupo.Items.Add(Convert.ToString(row["GRUPO"]));       
+                    txtgrupo.Text = Convert.ToString(row["GRUPO"]);
                     txtturno.Text = Convert.ToString(row["TURNO"]);
                     txtcodasig.Text = Convert.ToString(row["COD_ASIG"]);
                     txtasignatura.Text = Convert.ToString(row["ASIGNATURA"]);
@@ -211,7 +211,7 @@ namespace Ginmasio
                         // Verificar si la celda de la nota final está vacía
                         if (row.Cells["NOTA_FINAL"].Value == null || string.IsNullOrWhiteSpace(row.Cells["NOTA_FINAL"].Value.ToString()))
                         {
-                            mensaje_02.ShowDialog();
+                            MessageBox.Show("Error: Hay filas con notas vacías. Por favor, llene todas las notas antes de guardar.", "Error de Guardado", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
                         }
                     }
@@ -232,7 +232,7 @@ namespace Ginmasio
                     }
                 }
 
-                mensaje.ShowDialog();
+                MessageBox.Show("Notas guardadas correctamente.", "Guardado Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
